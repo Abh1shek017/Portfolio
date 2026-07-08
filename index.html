@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Abhishek Kumar Jayswal - BTech ECE Student at IIIT Nagpur & Full Stack Developer. Showcase of 7 production-grade mobile, web, and IoT apps.">
+  <title>Abhishek Kumar Jayswal | Portfolio</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Abhishek<span>.</span></a>
+      
+      <div class="nav__links">
+        <a href="#home" class="nav__link nav__link--active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <span>🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#home" class="mobile-nav__link">Home</a>
+    <a href="#about" class="mobile-nav__link">About</a>
+    <a href="#skills" class="mobile-nav__link">Skills</a>
+    <a href="#projects" class="mobile-nav__link">Projects</a>
+    <a href="#contact" class="mobile-nav__link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <header class="hero section" id="home">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__greeting">
+          <span>👋</span> Hello, I am
+        </div>
+        <h1 class="hero__name">Abhishek Kumar Jayswal</h1>
+        <div class="hero__title-wrapper">
+          <span class="hero__title-static">I am a</span>
+          <span class="hero__title-dynamic" id="dynamic-text">Full Stack Developer</span>
+          <span class="hero__cursor"></span>
+        </div>
+        <p class="hero__desc">
+          4th year BTech student at IIIT Nagpur specializing in Flutter development and full-stack applications. I build robust cross-platform mobile apps, cloud backends, games, and IoT pipelines.
+        </p>
+        <div class="hero__buttons">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero__scroll-hint">
+      <span>Scroll Down</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section class="section section--alt" id="about">
+    <div class="container reveal">
+      <div class="section-header">
+        <span class="section-header__label">01 / ABOUT ME</span>
+        <h2 class="section-header__title">Who I Am</h2>
+        <p class="section-header__desc">A brief introduction to my background, education, and interests.</p>
+      </div>
+
+      <div class="about__content">
+        <div class="about__image-wrapper">
+          <div class="about__image-placeholder">🧑‍💻</div>
+        </div>
+        <div class="about__text">
+          <h3>Passionate Software Builder</h3>
+          <p>
+            I am a BTech student in Electronics and Communication Engineering at the Indian Institute of Information Technology, Nagpur. My primary passion lies in building apps that solve real-world problems.
+          </p>
+          <p>
+            With expertise spanning from clean frontend architectures in Flutter to scalable backend services using Python (FastAPI/Flask) and relational database schemas, I design end-to-end solutions that are fast, intuitive, and secure.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat-item">
+              <div class="about__stat-num">7</div>
+              <div class="about__stat-label">Projects Built</div>
+            </div>
+            <div class="about__stat-item">
+              <div class="about__stat-num">15+</div>
+              <div class="about__stat-label">Technologies</div>
+            </div>
+            <div class="about__stat-item">
+              <div class="about__stat-num">4th</div>
+              <div class="about__stat-label">Year BTech</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+       ============================================================ -->
+  <section class="section" id="skills">
+    <div class="container reveal">
+      <div class="section-header">
+        <span class="section-header__label">02 / EXPERTISE</span>
+        <h2 class="section-header__title">Technical Stack</h2>
+        <p class="section-header__desc">The languages, frameworks, databases, and tools I use to bring ideas to life.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="skills__category">
+          <h3 class="skills__category-title">Languages</h3>
+          <div class="skills__list">
+            <span class="badge badge--accent">Dart</span>
+            <span class="badge badge--accent">Kotlin</span>
+            <span class="badge badge--accent">Python</span>
+            <span class="badge badge--accent">JavaScript</span>
+            <span class="badge">SQL</span>
+            <span class="badge">HTML5/CSS3</span>
+          </div>
+        </div>
+
+        <div class="skills__category">
+          <h3 class="skills__category-title">Frameworks & Libraries</h3>
+          <div class="skills__list">
+            <span class="badge badge--accent">Flutter</span>
+            <span class="badge badge--accent">FastAPI</span>
+            <span class="badge badge--accent">Flask</span>
+            <span class="badge">React.js</span>
+            <span class="badge">Flame (Game Engine)</span>
+            <span class="badge">Jetpack Compose</span>
+            <span class="badge">Riverpod / Provider</span>
+            <span class="badge">Drift (SQLite ORM)</span>
+            <span class="badge">Hive</span>
+          </div>
+        </div>
+
+        <div class="skills__category">
+          <h3 class="skills__category-title">Databases & Auth</h3>
+          <div class="skills__list">
+            <span class="badge badge--accent">PostgreSQL</span>
+            <span class="badge badge--accent">Firebase Suite</span>
+            <span class="badge">Supabase</span>
+            <span class="badge">SQLite</span>
+            <span class="badge">Hive NoSQL</span>
+          </div>
+        </div>
+
+        <div class="skills__category">
+          <h3 class="skills__category-title">Tools & Infrastructure</h3>
+          <div class="skills__list">
+            <span class="badge badge--accent">Git / GitHub</span>
+            <span class="badge badge--accent">Docker</span>
+            <span class="badge">Alembic</span>
+            <span class="badge">Twilio</span>
+            <span class="badge">Wokwi ESP32 IoT Sim</span>
+            <span class="badge">Figma</span>
+            <span class="badge">scikit-learn (ML)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+       ============================================================ -->
+  <section class="section section--alt" id="projects">
+    <div class="container reveal">
+      <div class="section-header">
+        <span class="section-header__label">03 / SHOWCASE</span>
+        <h2 class="section-header__title">Featured Projects</h2>
+        <p class="section-header__desc">An overview of my top projects spanning mobile development, game design, full-stack tools, and IoT implementations.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <!-- Project 1: MedTrack -->
+        <a href="projects/medtrack.html" class="project-card">
+          <div class="project-card__image">💊</div>
+          <div class="project-card__body">
+            <div class="project-card__name">MedTrack</div>
+            <p class="project-card__desc">A robust back-office pharmacy procurement, batch management, and credit tracking system built offline-first.</p>
+            <div class="project-card__tags">
+              <span class="badge">Flutter</span>
+              <span class="badge">FastAPI</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">Drift</span>
+            </div>
+            <span class="project-card__link">View details <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Project 2: AgriSense AI -->
+        <a href="projects/agrisense.html" class="project-card">
+          <div class="project-card__image">🌾</div>
+          <div class="project-card__body">
+            <div class="project-card__name">AgriSense AI</div>
+            <p class="project-card__desc">An IoT-powered crop recommendation system combining real-time ESP32 sensors, climate APIs, and an ensemble ML voting model.</p>
+            <div class="project-card__tags">
+              <span class="badge">Flutter</span>
+              <span class="badge">Flask</span>
+              <span class="badge">ML</span>
+              <span class="badge">IoT</span>
+            </div>
+            <span class="project-card__link">View details <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Project 3: UrbanLeafs -->
+        <a href="projects/urbanleafs.html" class="project-card">
+          <div class="project-card__image">🌿</div>
+          <div class="project-card__body">
+            <div class="project-card__name">UrbanLeafs</div>
+            <p class="project-card__desc">A business operations suite for SMEs featuring shift attendance logging, live stock metrics, order management, and balance sheet reporting.</p>
+            <div class="project-card__tags">
+              <span class="badge">Flutter</span>
+              <span class="badge">Firebase</span>
+              <span class="badge">Riverpod</span>
+            </div>
+            <span class="project-card__link">View details <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Project 4: ReBalance -->
+        <a href="projects/rebalance.html" class="project-card">
+          <div class="project-card__image">🌟</div>
+          <div class="project-card__body">
+            <div class="project-card__name">ReBalance</div>
+            <p class="project-card__desc">A digital wellness tracker featuring screen-time gamification ("digital calories"), app usage limitations, and context-aware suggestions.</p>
+            <div class="project-card__tags">
+              <span class="badge">Flutter</span>
+              <span class="badge">Hive</span>
+              <span class="badge">UsageStats</span>
+            </div>
+            <span class="project-card__link">View details <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Project 5: NextMove -->
+        <a href="projects/nextmove.html" class="project-card">
+          <div class="project-card__image">🚗</div>
+          <div class="project-card__body">
+            <div class="project-card__name">NextMove</div>
+            <p class="project-card__desc">Mobility tracking and mode classification (walking, driving, cycling) utilizing Android motion sensors, GPS tracking, and FastAPI backend predictions.</p>
+            <div class="project-card__tags">
+              <span class="badge">Flutter</span>
+              <span class="badge">FastAPI</span>
+              <span class="badge">ML</span>
+              <span class="badge">Sensors</span>
+            </div>
+            <span class="project-card__link">View details <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Project 6: Logic Grid -->
+        <a href="projects/logic-grid.html" class="project-card">
+          <div class="project-card__image">🧩</div>
+          <div class="project-card__body">
+            <div class="project-card__name">Logic Grid</div>
+            <p class="project-card__desc">A tactical grid puzzle game incorporating player profiles, Supabase progression sync, seasonal events, and Google Play Services achievements.</p>
+            <div class="project-card__tags">
+              <span class="badge">Flutter</span>
+              <span class="badge">Supabase</span>
+              <span class="badge">Hive</span>
+              <span class="badge">Play Services</span>
+            </div>
+            <span class="project-card__link">View details <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Project 7: Duel Fights -->
+        <a href="projects/duel-fights.html" class="project-card">
+          <div class="project-card__image">🎮</div>
+          <div class="project-card__body">
+            <div class="project-card__name">Duel Fights</div>
+            <p class="project-card__desc">A local and online multiplayer pong combat game powered by Google Nearby Connections and the Flame game engine.</p>
+            <div class="project-card__tags">
+              <span class="badge">Flutter</span>
+              <span class="badge">Flame</span>
+              <span class="badge">Nearby Connect</span>
+            </div>
+            <span class="project-card__link">View details <span>→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section class="section" id="contact">
+    <div class="container reveal">
+      <div class="section-header">
+        <span class="section-header__label">04 / CONNECT</span>
+        <h2 class="section-header__title">Get In Touch</h2>
+        <p class="section-header__desc">Have an interesting project or career opportunity? Send me a message!</p>
+      </div>
+
+      <div class="contact__content">
+        <div class="contact__info">
+          <h3>Let's Collaborate</h3>
+          <p>
+            I'm currently looking for full-time opportunities or collaborative projects in mobile app development, backend services, or cyber-physical system design.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:abhishekak8878@gmail.com" class="contact__link-item">
+              <div class="contact__link-icon">
+                <img src="assets/icons/email.png" alt="Email">
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>abhishekak8878@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/abhishekkumar017" target="_blank" rel="noopener" class="contact__link-item">
+              <div class="contact__link-icon">
+                <img src="assets/icons/linkedin.png" alt="LinkedIn">
+              </div>
+              <div>
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/abhishekkumar017</p>
+              </div>
+            </a>
+            <a href="https://github.com/Abh1shek017" target="_blank" rel="noopener" class="contact__link-item">
+              <div class="contact__link-icon">
+                <img src="assets/icons/github.png" alt="GitHub">
+              </div>
+              <div>
+                <h4>GitHub</h4>
+                <p>github.com/Abh1shek017</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <!-- Using Formspree endpoint. Replace with your actual Formspree ID or let the user do it -->
+          <form action="https://formspree.io/f/xoqgqpqd" method="POST" class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" required placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="How can I help you?"></textarea>
+            </div>
+            <div class="form-success" id="form-success"></div>
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__social">
+        <a href="https://github.com/Abh1shek017" target="_blank" rel="noopener" class="footer__social-link" aria-label="GitHub">
+          <img src="assets/icons/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/abhishekkumar017" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
+          <img src="assets/icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:abhishekak8878@gmail.com" class="footer__social-link" aria-label="Email">
+          <img src="assets/icons/email.png" alt="Email">
+        </a>
+      </div>
+      <p class="footer__text">
+        © 2026 Abhishek Kumar Jayswal. All Rights Reserved. Built with HTML, CSS, and JS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    ▲
+  </button>
+
+  <!-- JavaScript Files -->
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

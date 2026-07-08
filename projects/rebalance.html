@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ReBalance - Android digital wellness and screen time gamification app. Built by Abhishek Kumar Jayswal.">
+  <title>ReBalance | Abhishek Kumar Jayswal Portfolio</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Abhishek<span>.</span></a>
+      
+      <div class="nav__links">
+        <a href="../index.html#home" class="nav__link">Home</a>
+        <a href="../index.html#about" class="nav__link">About</a>
+        <a href="../index.html#skills" class="nav__link">Skills</a>
+        <a href="../index.html#projects" class="nav__link nav__link--active">Projects</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <span>🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html#home" class="mobile-nav__link">Home</a>
+    <a href="../index.html#about" class="mobile-nav__link">About</a>
+    <a href="../index.html#skills" class="mobile-nav__link">Skills</a>
+    <a href="../index.html#projects" class="mobile-nav__link">Projects</a>
+    <a href="../index.html#contact" class="mobile-nav__link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       PROJECT DETAILS
+       ============================================================ -->
+  <main class="project-detail section">
+    <div class="container container--narrow reveal">
+      <a href="../index.html#projects" class="project-detail__back">
+        <span>←</span> Back to Projects
+      </a>
+
+      <header class="project-detail__header">
+        <div class="project-detail__emoji">🌟</div>
+        <h1 class="project-detail__title">
+          ReBalance
+          <span class="badge badge--status badge--completed">Completed</span>
+          <span class="badge badge--accent">Solo Developer</span>
+        </h1>
+        <p class="project-detail__tagline">
+          A digital wellness app that helps users manage screen time and build healthy digital habits.
+        </p>
+        <div class="project-detail__meta">
+          <span><strong>Platform:</strong> Android (Flutter)</span>
+          <span>•</span>
+          <span><strong>Source Code:</strong> Private</span>
+        </div>
+      </header>
+
+      <!-- Tech Stack Badges -->
+      <section class="tech-stack">
+        <span class="badge badge--accent">Flutter</span>
+        <span class="badge badge--accent">Dart</span>
+        <span class="badge badge--accent">Provider</span>
+        <span class="badge badge--accent">Hive</span>
+        <span class="badge badge--accent">Android UsageStats API</span>
+        <span class="badge">Local Notifications</span>
+        <span class="badge">Overlay Window</span>
+        <span class="badge">FL Chart</span>
+        <span class="badge">Permission Handler</span>
+      </section>
+
+      <!-- Detailed Description -->
+      <section class="section-content reveal">
+        <h2>About ReBalance</h2>
+        <p>
+          ReBalance is a native Android application designed to help users establish mindful phone usage patterns and break screen addictions. Built with Flutter, it interacts with Android system services to collect application usage statistics and monitors app usage in the foreground every 2 seconds. State management is handled with Provider, ensuring smooth updates across charts, timers, and calorie counts.
+        </p>
+        <p>
+          The app introduces a unique gamification system called "Digital Calories". Each minute of app usage is converted into a score, scaled by category multipliers (Social Media 2.0x, Gaming 2.2x, Education 0.6x) and penalties (1.5x multiplier for late-night screen time). Users can set limits on screen time, blocking apps that exceed their allowances using custom overlay draw permissions.
+        </p>
+      </section>
+
+      <!-- Key Features Grid -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Key Modules & Features</h2>
+        <ul class="feature-list">
+          <li class="feature-list__item">
+            <span class="feature-list__icon">📊</span>
+            <div>
+              <strong>Usage Monitoring:</strong> Hooks into the Android UsageStats API to track foreground apps, active durations, and session transitions in real time.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🔥</span>
+            <div>
+              <strong>Digital Calorie System:</strong> Gamifies screen time by converting minutes into "calories" based on category weightings and late-night penalties.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">⏰</span>
+            <div>
+              <strong>App Limiting & Overlays:</strong> Set limits on specific apps. If limits are reached, the app uses system overlay draw rules to block further interaction.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🔔</span>
+            <div>
+              <strong>Smart Notifications:</strong> Contextual alerts (warnings, limits reached, consecutive usage warnings) utilizing local notifications.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🎯</span>
+            <div>
+              <strong>Mindful Suggestions:</strong> Recommends healthy physical activities (Mindfulness, Reading, Exercise) based on current usage phases.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">⚡</span>
+            <div>
+              <strong>Streak Trackers:</strong> Incorporates streak tracking and rewards to motivate consistency in completing physical activities.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Interactive Screen Breakdown -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Screen-by-Screen Breakdown</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click a row to highlight a screen's function in your review.</p>
+        <table class="screen-table">
+          <thead>
+            <tr>
+              <th>Screen</th>
+              <th>Functionality & Interactive Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="screen-name">Onboarding</td>
+              <td>Guides users through Android permission requests (Usage Access, Notifications, Overlay Windows) and daily goal setting.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Home / Dashboard</td>
+              <td>Main view with progress rings, usage statistics, active suggestions, and digital calorie widgets.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Calorie Breakdown</td>
+              <td>Interactive pie charts showing digital calorie consumption per app and category, with options to edit targets.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">App Limits Control</td>
+              <td>Allows users to toggle active blockers and set minute thresholds on an app-by-app basis.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Physical Suggestions</td>
+              <td>Catalog of offline activities, with built-in timers, progress wheels, and active session controls.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">User Settings</td>
+              <td>Main adjustments for screen-time thresholds, notification toggles, and light/dark theme switches.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Screenshot Gallery -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>App Walkthrough</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click on a screen preview to view it in high resolution.</p>
+        <div class="gallery">
+          <div class="gallery__item">
+            <div class="placeholder-img">📊 Screen Time Dashboard</div>
+            <div class="gallery__item-label">Home Dashboard</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">🔥 Digital Calorie Tracker</div>
+            <div class="gallery__item-label">Calorie Insights</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">⏰ App Blocker Overlay</div>
+            <div class="gallery__item-label">Blocking Prompt</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Links -->
+      <section class="project-links reveal">
+        <button class="btn btn--primary" disabled>
+          🔒 Private Code
+        </button>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       LIGHTBOX VIEWPORT
+       ============================================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">◀</button>
+    <img src="" alt="Enlarged screenshot" class="lightbox__img">
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next">▶</button>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        © 2026 Abhishek Kumar Jayswal. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="../js/projects.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

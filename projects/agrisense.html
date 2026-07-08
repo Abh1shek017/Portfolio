@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgriSense AI - IoT smart crop recommendation and farm management system. Built by Abhishek Kumar Jayswal and team.">
+  <title>AgriSense AI | Abhishek Kumar Jayswal Portfolio</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Abhishek<span>.</span></a>
+      
+      <div class="nav__links">
+        <a href="../index.html#home" class="nav__link">Home</a>
+        <a href="../index.html#about" class="nav__link">About</a>
+        <a href="../index.html#skills" class="nav__link">Skills</a>
+        <a href="../index.html#projects" class="nav__link nav__link--active">Projects</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <span>🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html#home" class="mobile-nav__link">Home</a>
+    <a href="../index.html#about" class="mobile-nav__link">About</a>
+    <a href="../index.html#skills" class="mobile-nav__link">Skills</a>
+    <a href="../index.html#projects" class="mobile-nav__link">Projects</a>
+    <a href="../index.html#contact" class="mobile-nav__link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       PROJECT DETAILS
+       ============================================================ -->
+  <main class="project-detail section">
+    <div class="container container--narrow reveal">
+      <a href="../index.html#projects" class="project-detail__back">
+        <span>←</span> Back to Projects
+      </a>
+
+      <header class="project-detail__header">
+        <div class="project-detail__emoji">🌾</div>
+        <h1 class="project-detail__title">
+          AgriSense AI
+          <span class="badge badge--status badge--completed">Completed</span>
+          <span class="badge badge--accent">Team Member</span>
+        </h1>
+        <p class="project-detail__tagline">
+          An IoT-powered smart crop recommendation system using machine learning pipelines.
+        </p>
+        <div class="project-detail__meta">
+          <span><strong>Platform:</strong> Mobile App (Flutter) + Web Dashboard (React) + IoT Hardware</span>
+          <span>•</span>
+          <span><strong>Source Code:</strong> Private</span>
+        </div>
+      </header>
+
+      <!-- Tech Stack Badges -->
+      <section class="tech-stack">
+        <span class="badge badge--accent">Flutter</span>
+        <span class="badge badge--accent">Dart</span>
+        <span class="badge badge--accent">Riverpod</span>
+        <span class="badge badge--accent">Hive</span>
+        <span class="badge badge--accent">Firebase FCM</span>
+        <span class="badge">React.js</span>
+        <span class="badge">D3.js</span>
+        <span class="badge">Chart.js</span>
+        <span class="badge">Leaflet</span>
+        <span class="badge">Python</span>
+        <span class="badge">Flask</span>
+        <span class="badge">scikit-learn (ML)</span>
+        <span class="badge">ESP32 IoT</span>
+        <span class="badge">MQTT</span>
+        <span class="badge">NASA POWER API</span>
+        <span class="badge">Open-Meteo API</span>
+        <span class="badge">SoilGrids API</span>
+      </section>
+
+      <!-- Detailed Description -->
+      <section class="section-content reveal">
+        <h2>About AgriSense AI</h2>
+        <p>
+          AgriSense AI is an end-to-end smart agriculture solution designed to transition farming from traditional rules-of-thumb to high-precision empirical data. The system features a simulated IoT hardware tier built with ESP32 (simulated in Wokwi) which captures soil NPK values, pH, moisture levels, and atmospheric metrics. This telemetry is streamed via MQTT to a Python Flask backend.
+        </p>
+        <p>
+          The core ML prediction engine fuses the physical sensor inputs with geospatial data fetched dynamically from NASA POWER, SoilGrids, and Open-Meteo. An ensemble voting classifier (comprising Random Forest, Support Vector Machine, and Multi-Layer Perceptron) processes this data to recommend the most suitable crop with statistical confidence levels. The project provides an interactive React.js web dashboard with GPS zone mapping, and a native Flutter mobile app featuring local caching via Hive and Firebase push anomaly warnings.
+        </p>
+      </section>
+
+      <!-- Key Features Grid -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Key Modules & Features</h2>
+        <ul class="feature-list">
+          <li class="feature-list__item">
+            <span class="feature-list__icon">⚡</span>
+            <div>
+              <strong>IoT Data Acquisition:</strong> Telemetry capturing NPK, pH, moisture, and temperature using simulated edge microcontrollers.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🗳️</span>
+            <div>
+              <strong>Ensemble Machine Learning:</strong> Combines Random Forest, SVM, and Neural Network (MLP) weights for crop suitability predictions.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🗺️</span>
+            <div>
+              <strong>GPS Field Zoning:</strong> Interactive Leaflet map layout allowing farmers to outline fields and map soil profiles.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🌦️</span>
+            <div>
+              <strong>Weather Integration:</strong> 14-day local agricultural forecasting coupled with NASA historical solar metrics.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🔄</span>
+            <div>
+              <strong>Crop Rotation Planner:</strong> A 4-season rotation tool recommending sequences that prevent soil nutrition exhaustion.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">💧</span>
+            <div>
+              <strong>Water Budget Optimizer:</strong> Daily irrigation recommendations utilizing local evapotranspiration calculation rules.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">📦</span>
+            <div>
+              <strong>Offline Caching (Mobile):</strong> Local database storage on mobile using Hive to protect accessibility in weak network locations.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🔔</span>
+            <div>
+              <strong>Push Warnings:</strong> Immediate alerts sent via Firebase Cloud Messaging if field thresholds indicate critical drought or acidity.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Interactive Screen Breakdown -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Screen-by-Screen Breakdown</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click a row to highlight a screen's function in your review.</p>
+        <table class="screen-table">
+          <thead>
+            <tr>
+              <th>Screen</th>
+              <th>Functionality & Interactive Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="screen-name">React Dashboard</td>
+              <td>Main hub with current sensor outputs, live ML predictions, and streaming data feeds.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Sensor Hub</td>
+              <td>Visualizes high-fidelity gauges for NPK (Nitrogen, Phosphorus, Potassium), pH, and moisture.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">GPS Zones Map</td>
+              <td>Geographical map interface showing farm perimeters, soil layers, and moisture heatmap.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Rotation Planner</td>
+              <td>Configurable grid showing multi-season crop sequences and estimated soil recoveries.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Water Budget</td>
+              <td>Chart indicating daily water inputs, weather forecasts, and irrigation recommendations.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Mobile Dashboard</td>
+              <td>Clean mobile homepage displaying summary cards, current suggestions, and offline statuses.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Mobile Forecast</td>
+              <td>Offline-capable page pulling 14-day weather forecasts and general crop requirements.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- System Architecture Diagram -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Architecture Diagram</h2>
+        <div class="architecture">
+          <pre>
+  ┌──────────────┐   ┌──────────────────┐   ┌───────────────┐
+  │  ESP32 IoT   │──▶│  Python / Flask   │◀──│ NASA POWER    │
+  │  (Wokwi Sim) │   │  Backend Server   │◀──│ Open-Meteo    │
+  │  NPK, pH,    │   │                   │◀──│ SoilGrids API │
+  │  Moisture,   │   │  ┌─────────────┐  │   └───────────────┘
+  │  Temp, DHT22 │   │  │ ML Ensemble │  │
+  └──────────────┘   │  │ RF+SVM+MLP  │  │
+                     │  └─────────────┘  │
+                     └─────┬──────┬──────┘
+                           │      │
+              ┌────────────▼┐  ┌──▼──────────────┐
+              │ React Web   │  │ Flutter Mobile   │
+              │ Dashboard   │  │ App (Offline)    │
+              │ D3, Charts, │  │ Hive DB, FCM,   │
+              │ Leaflet Map │  │ Geolocator      │
+              └─────────────┘  └─────────────────┘</pre>
+        </div>
+      </section>
+
+      <!-- Screenshot Gallery -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Project Walkthrough</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click on a screen preview to view it in high resolution.</p>
+        <div class="gallery">
+          <div class="gallery__item">
+            <div class="placeholder-img">📊 React Web Dashboard</div>
+            <div class="gallery__item-label">Web Console</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">🗺️ Leaflet Field Map</div>
+            <div class="gallery__item-label">GPS Field Zones</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">⚡ ESP32 Hardware Sim</div>
+            <div class="gallery__item-label">Wokwi Circuit</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Links -->
+      <section class="project-links reveal">
+        <button class="btn btn--primary" disabled>
+          🔒 Private Code
+        </button>
+        <button class="btn btn--outline" disabled>
+          🔗 Presentation Link (Private)
+        </button>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       LIGHTBOX VIEWPORT
+       ============================================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">◀</button>
+    <img src="" alt="Enlarged screenshot" class="lightbox__img">
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next">▶</button>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        © 2026 Abhishek Kumar Jayswal. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="../js/projects.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
