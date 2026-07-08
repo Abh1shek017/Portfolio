@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Manager - AI-powered developer operations cockpit and project board. Built by Abhishek Kumar Jayswal.">
+  <title>The Manager | Abhishek Kumar Jayswal Portfolio</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Abhishek<span>.</span></a>
+      
+      <div class="nav__links">
+        <a href="../index.html#home" class="nav__link">Home</a>
+        <a href="../index.html#about" class="nav__link">About</a>
+        <a href="../index.html#skills" class="nav__link">Skills</a>
+        <a href="../index.html#projects" class="nav__link nav__link--active">Projects</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <span>🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html#home" class="mobile-nav__link">Home</a>
+    <a href="../index.html#about" class="mobile-nav__link">About</a>
+    <a href="../index.html#skills" class="mobile-nav__link">Skills</a>
+    <a href="../index.html#projects" class="mobile-nav__link">Projects</a>
+    <a href="../index.html#contact" class="mobile-nav__link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       PROJECT DETAILS
+       ============================================================ -->
+  <main class="project-detail section">
+    <div class="container container--narrow reveal">
+      <a href="../index.html#projects" class="project-detail__back">
+        <span>←</span> Back to Projects
+      </a>
+
+      <header class="project-detail__header">
+        <div class="project-detail__emoji">💼</div>
+        <h1 class="project-detail__title">
+          The Manager
+          <span class="badge badge--status badge--completed">Completed</span>
+          <span class="badge badge--accent">Solo Developer</span>
+        </h1>
+        <p class="project-detail__tagline">
+          An AI-powered developer project manager and operations cockpit designed to organize code, projects, and environments in one dashboard.
+        </p>
+        <div class="project-detail__meta">
+          <span><strong>Platform:</strong> Web (Next.js Frontend + FastAPI Backend)</span>
+          <span>•</span>
+          <span><strong>Source Code:</strong> Private</span>
+        </div>
+      </header>
+
+      <!-- Tech Stack Badges -->
+      <section class="tech-stack">
+        <span class="badge badge--accent">Next.js 15</span>
+        <span class="badge badge--accent">TypeScript</span>
+        <span class="badge badge--accent">Tailwind CSS</span>
+        <span class="badge badge--accent">Zustand</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">SQLModel (SQLAlchemy)</span>
+        <span class="badge">PostgreSQL</span>
+        <span class="badge">SQLite</span>
+        <span class="badge">Groq SDK (Llama 3)</span>
+        <span class="badge">Docker Compose</span>
+      </section>
+
+      <!-- Detailed Description -->
+      <section class="section-content reveal">
+        <h2>About The Manager</h2>
+        <p>
+          The Manager is a self-hosted project cockpit built specifically for developers to centralize administrative coding tasks. It replaces fragmented notes, spreadsheet trackers, and environment logs with a unified operations dashboard. Fusing a Next.js 15 App Router interface with a FastAPI backend, it runs entirely containerized under Docker Compose.
+        </p>
+        <p>
+          The core user experience is centered around a keyboard-first Omnibar (`Ctrl+K`). This Omnibar supports quick commands (e.g. `/p` for new project, `/t` for new task) and advanced filtering symbols. Additionally, the Omnibar houses a natural language AI parser powered by Groq Llama 3.3. This AI service analyzes natural sentences (like "Create a high priority backend bug fix task for MedTrack estimate 45m") and automatically commits structured project objects to the PostgreSQL database.
+        </p>
+      </section>
+
+      <!-- Key Features Grid -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Key Modules & Features</h2>
+        <ul class="feature-list">
+          <li class="feature-list__item">
+            <span class="feature-list__icon">⌨️</span>
+            <div>
+              <strong>Omnibar Command Engine:</strong> Keyboard-driven utility supporting fast commands, parameter filters, and navigational paths.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🤖</span>
+            <div>
+              <strong>AI Query Processing:</strong> Natural language processing via Groq API (Llama 3) converting sentences directly into database actions.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🔑</span>
+            <div>
+              <strong>Developer Vault:</strong> Centralized credentials directory storing API keys, configurations, and active port registries.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">📈</span>
+            <div>
+              <strong>Workflow Triage:</strong> Tracks task priority matrices (P0/P1/P2) and features automatic AI category classification.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">⚙️</span>
+            <div>
+              <strong>Environments Control:</strong> Monitors active server setups, handles variables logs, and logs database backing metrics.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">📊</span>
+            <div>
+              <strong>AI Operations Manager:</strong> Tracks active LLM system prompts, monitors token windows, and logs API billing burn rates.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Interactive Screen Breakdown -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Screen-by-Screen Breakdown</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click a row to highlight a screen's function in your review.</p>
+        <table class="screen-table">
+          <thead>
+            <tr>
+              <th>Screen</th>
+              <th>Functionality & Interactive Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="screen-name">Project Workspace</td>
+              <td>Central console hosting active projects, database models, technical schemas, blueprints, and files.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Omnibar UI</td>
+              <td>Floating keyboard overlay (`Ctrl+K`) displaying filtered suggestions, parameters, and AI inputs.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Task Board</td>
+              <td>Drag-and-drop workflow lanes showing tasks organized by urgency and tech stack categories.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Secret Vault</td>
+              <td>Encrypted storage list containing connection strings, passwords, active port rules, and key values.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Environments Manager</td>
+              <td>Panel tracking docker containers, API endpoints, host ports, and configuration parameters.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">AI Operations Panel</td>
+              <td>Visual log tracking system prompt versions, API expenses, model types, and context token counters.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- System Architecture Diagram -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Architecture Diagram</h2>
+        <div class="architecture">
+          <pre>
+  ┌────────────────────────────────────────────────────────┐
+  │                 Next.js 15 Web Client                  │
+  │   ┌───────────────┐  ┌───────────────┐ ┌───────────┐   │
+  │   │  Omnibar UI   │  │ Project Board │ │ Vault UI  │   │
+  │   └───────┬───────┘  └───────┬───────┘ └─────┬─────┘   │
+  └───────────┼──────────────────┼───────────────┼─────────┘
+              │                  │               │
+              ▼                  ▼               ▼  REST API (HTTPS)
+  ┌────────────────────────────────────────────────────────┐
+  │                  Python / FastAPI Backend              │
+  │  ┌────────────────┐ ┌────────────────┐ ┌─────────────┐ │
+  │  │   SQLModel     │ │   AI Service   │ │ Port/Vault  │ │
+  │  │ (Postgre/Sqlite)│ │ (Groq Llama 3)│ │ Registry    │ │
+  │  └────────────────┘ └────────────────┘ └─────────────┘ │
+  └────────────────────────────────────────────────────────┘</pre>
+        </div>
+      </section>
+
+      <!-- Screenshot Gallery -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>App Walkthrough</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click on a screen preview to view it in high resolution.</p>
+        <div class="gallery">
+          <div class="gallery__item">
+            <div class="placeholder-img">📊 Dashboard Workspace</div>
+            <div class="gallery__item-label">Cockpit view</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">⌨️ Omnibar Control Panel</div>
+            <div class="gallery__item-label">Omnibar Active</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">🔒 Secret Vault Credentials</div>
+            <div class="gallery__item-label">Developer Vault</div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </main>
+
+  <!-- ============================================================
+       LIGHTBOX VIEWPORT
+       ============================================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">◀</button>
+    <img src="" alt="Enlarged screenshot" class="lightbox__img">
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next">▶</button>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        © 2026 Abhishek Kumar Jayswal. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="../js/projects.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

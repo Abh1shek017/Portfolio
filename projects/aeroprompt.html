@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AeroPrompt - Browser Extension and Dashboard for AI prompt optimization. Built by Abhishek Kumar Jayswal.">
+  <title>AeroPrompt | Abhishek Kumar Jayswal Portfolio</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Abhishek<span>.</span></a>
+      
+      <div class="nav__links">
+        <a href="../index.html#home" class="nav__link">Home</a>
+        <a href="../index.html#about" class="nav__link">About</a>
+        <a href="../index.html#skills" class="nav__link">Skills</a>
+        <a href="../index.html#projects" class="nav__link nav__link--active">Projects</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <span>🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html#home" class="mobile-nav__link">Home</a>
+    <a href="../index.html#about" class="mobile-nav__link">About</a>
+    <a href="../index.html#skills" class="mobile-nav__link">Skills</a>
+    <a href="../index.html#projects" class="mobile-nav__link">Projects</a>
+    <a href="../index.html#contact" class="mobile-nav__link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       PROJECT DETAILS
+       ============================================================ -->
+  <main class="project-detail section">
+    <div class="container container--narrow reveal">
+      <a href="../index.html#projects" class="project-detail__back">
+        <span>←</span> Back to Projects
+      </a>
+
+      <header class="project-detail__header">
+        <div class="project-detail__emoji">🚀</div>
+        <h1 class="project-detail__title">
+          <a href="https://chromewebstore.google.com/detail/ai-prompt-optimizer-aerop/mmobjkmjalcmndglobfffdgdkdkcngeg" target="_blank" rel="noopener" class="project-detail__title-link">
+            AeroPrompt <span>🔗</span>
+          </a>
+          <span class="badge badge--status badge--completed">Completed</span>
+          <span class="badge badge--accent">Full Stack Developer</span>
+        </h1>
+        <p class="project-detail__tagline">
+          An AI prompt optimizer browser extension and companion website that turns simple queries into context-aware "Super Prompts".
+        </p>
+        <div class="project-detail__meta">
+          <span><strong>Platform:</strong> Web (Next.js) + Chrome Extension (Plasmo/React/TS) + API Backend</span>
+          <span>•</span>
+          <span><strong>Source Code:</strong> Private</span>
+        </div>
+      </header>
+
+      <!-- Tech Stack Badges -->
+      <section class="tech-stack">
+        <span class="badge badge--accent">Next.js</span>
+        <span class="badge badge--accent">React.js</span>
+        <span class="badge badge--accent">TypeScript</span>
+        <span class="badge badge--accent">TailwindCSS</span>
+        <span class="badge badge--accent">Plasmo</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">Python</span>
+        <span class="badge">Supabase</span>
+        <span class="badge">PostgreSQL</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Google Cloud Run</span>
+        <span class="badge">Razorpay</span>
+        <span class="badge">Resend</span>
+      </section>
+
+      <!-- Detailed Description -->
+      <section class="section-content reveal">
+        <h2>About AeroPrompt</h2>
+        <p>
+          AeroPrompt is a comprehensive utility designed to optimize user prompts on popular AI interfaces (ChatGPT, Claude, and Gemini). Available as both a browser extension and a companion dashboard, the application handles prompt rewriting dynamically on the client side using a secure backend AI pipeline.
+        </p>
+        <p>
+          The Chrome extension is built on the Plasmo browser extension framework using React and TypeScript, allowing it to inject custom script overlays directly into LLM text areas. These script overlays intercept user entries, stream conversation history to calculate context relevance, append personalized user bio directives, and allow real-time tone adjustments (Professional, Persuasive, Concise). Telemetry is handled by a Dockerized FastAPI service deployed on Google Cloud Run, supported by Supabase for DB storage and payment configurations via Razorpay checkout webhooks.
+        </p>
+      </section>
+
+      <!-- Key Features Grid -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Key Modules & Features</h2>
+        <ul class="feature-list">
+          <li class="feature-list__item">
+            <span class="feature-list__icon">⌨️</span>
+            <div>
+              <strong>Smart Enter:</strong> Intercepts your Enter key to optimize prompts directly on the fly. Press Enter once to optimize, and again to send.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🧠</span>
+            <div>
+              <strong>Context Awareness:</strong> Analyzes conversation history on ChatGPT/Claude to ensure optimized outputs align with ongoing chats.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">👤</span>
+            <div>
+              <strong>Bio Personalization:</strong> Adapts prompts based on custom user bio directives (industry, role, style) to match unique workflows.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🎭</span>
+            <div>
+              <strong>Tone Selection:</strong> Quickly toggle prompt results between Professional, Friendly, Concise, and Persuasive tones.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">💳</span>
+            <div>
+              <strong>Payments & Invoicing:</strong> Fully integrated pricing grids, subscriptions, and billing alerts powered by Razorpay checkout workflows.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🐳</span>
+            <div>
+              <strong>Cloud Pipelines:</strong> Scalable backend microservices built with Python / FastAPI and deployed via Docker on Google Cloud Run.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Interactive Screen Breakdown -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Screen-by-Screen Breakdown</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click a row to highlight a screen's function in your review.</p>
+        <table class="screen-table">
+          <thead>
+            <tr>
+              <th>Screen</th>
+              <th>Functionality & Interactive Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="screen-name">Extension Popup UI</td>
+              <td>Chrome extension widget displaying toggle switches, tone select menus, and backend connectivity states.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Platform Overlays</td>
+              <td>Injected controls overlapping ChatGPT/Claude fields, showing quick buttons to enhance prompt inputs.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Marketing Homepage</td>
+              <td>Next.js landing showcasing value propositions, interactive prompt optimizers, pricing plans, and FAQs.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">Subscription Center</td>
+              <td>Portal managing pricing, Razorpay billing forms, transaction histories, and active plan alerts.</td>
+            </tr>
+            <tr>
+              <td class="screen-name">User Dashboard</td>
+              <td>Private user workspace displaying prompt histories, optimization statistics, and active bio templates.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- System Architecture Diagram -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Architecture Diagram</h2>
+        <div class="architecture">
+          <pre>
+  ┌──────────────────┐       ┌─────────────────┐       ┌──────────────────────┐
+  │ Browser Extension│◀─────▶│ Next.js Website │◀─────▶│   Supabase Cloud DB  │
+  │ (Plasmo/React/TS)│       │ (Dashboard/Pay) │       │ (PostgreSQL, Auth)   │
+  └────────┬─────────┘       └────────┬────────┘       └──────────┬───────────┘
+           │                          │                           │
+           │ REST                     │ REST                      │ Client
+           ▼                          ▼                           ▼
+  ┌───────────────────────────────────────────────────────────────────────────┐
+  │                          Python / FastAPI Backend                         │
+  │     ┌───────────────────────┐             ┌────────────────────────┐      │
+  │     │   Prompt Optimizer    │             │   Subscription Webhook │      │
+  │     │   (LLM Inference)     │             │     (Razorpay Pay)     │      │
+  │     └───────────────────────┘             └────────────────────────┘      │
+  └─────────────────────────────────────┬─────────────────────────────────────┘
+                                        ▼
+                               ┌──────────────────┐
+                               │ Google Cloud Run │
+                               │  (Docker Deploy) │
+                               └──────────────────┘</pre>
+        </div>
+      </section>
+
+      <!-- Screenshot Gallery -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Project Walkthrough</h2>
+        <p class="text-muted" style="margin-bottom: var(--space-md);">Click on a screen preview to view it in high resolution.</p>
+        <div class="gallery">
+          <div class="gallery__item">
+            <div class="placeholder-img">🖥️ Website Dashboard</div>
+            <div class="gallery__item-label">Web Console</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">🧩 Chrome Extension popup</div>
+            <div class="gallery__item-label">Popup Overlay</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-img">⚙️ Cloud Run Backend</div>
+            <div class="gallery__item-label">Dockerized API</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Links -->
+      <section class="project-links reveal">
+        <a href="https://chromewebstore.google.com/detail/ai-prompt-optimizer-aerop/mmobjkmjalcmndglobfffdgdkdkcngeg" target="_blank" rel="noopener" class="btn btn--primary">
+          🛍️ View on Chrome Web Store
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       LIGHTBOX VIEWPORT
+       ============================================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">◀</button>
+    <img src="" alt="Enlarged screenshot" class="lightbox__img">
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next">▶</button>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        © 2026 Abhishek Kumar Jayswal. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="../js/projects.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

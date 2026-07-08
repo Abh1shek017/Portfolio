@@ -320,8 +320,102 @@ const PROJECTS = {
       { name: 'Pong Game Screen', desc: 'Real-time gameplay with Flame engine rendering, paddles, ball physics, and scoring' }
     ],
     architecture: null
+  },
+
+  aeroprompt: {
+    id: 'aeroprompt',
+    emoji: '🚀',
+    name: 'AeroPrompt',
+    tagline: 'An AI prompt optimizer browser extension and companion website',
+    status: 'Completed',
+    role: 'Full Stack Developer',
+    platform: 'Web + Browser Extension + API Backend',
+    description: 'AeroPrompt is a comprehensive AI prompt optimization system designed to elevate interactions with LLMs. Fusing a Chrome browser extension built with Plasmo and TypeScript with a Next.js companion landing website and a FastAPI python backend. It intercepts prompts, analyzes dialogue history for context coherence, uses user Bio personalization, and adjusts tones (Professional, Concise, Friendly, Persuasive) to return polished "Super Prompts". Supported by Supabase database / authentication and Razorpay webhook integrations.',
+    techStack: ['Next.js', 'React.js', 'TypeScript', 'TailwindCSS', 'Plasmo', 'FastAPI', 'Python', 'Supabase', 'PostgreSQL', 'Docker', 'Google Cloud Run', 'Razorpay', 'Resend'],
+    features: [
+      'Smart Enter: intercepts Enter key to automatically optimize prompts before submission',
+      'Context Awareness: analyzes chat history to keep optimized prompts relevant to the conversation',
+      'Personalization: tailors prompt styling using custom user Bio and style preferences',
+      'Tone adjustments: select from Professional, Friendly, Concise, and Persuasive tones',
+      'Multi-Platform content injectors adapting to ChatGPT, Claude, and Gemini inputs',
+      'Subscription portal with Razorpay payment processing and billing webhooks',
+      'Secure guest/user authentication flow managed by Supabase Auth',
+      'Dockerized Google Cloud Run microservice deployment pipeline'
+    ],
+    screens: [
+      { name: 'Extension Popup UI', desc: 'Sleek toggle panels, status monitors, and custom tone dropdown select menus' },
+      { name: 'Platform Overlays', desc: 'Injected interface buttons and triggers on ChatGPT and Claude input wrappers' },
+      { name: 'Marketing Website', desc: 'Landing homepage displaying product analytics, feature lists, and dynamic interactive demos' },
+      { name: 'Subscription Center', desc: 'User checkout paths, billing intervals, and integrated Razorpay payment frames' },
+      { name: 'User Profile Dashboard', desc: 'Secure console displaying active session lists, payment history, and custom bio editors' }
+    ],
+    architecture: `
+  ┌──────────────────┐       ┌─────────────────┐       ┌──────────────────────┐
+  │ Browser Extension│◀─────▶│ Next.js Website │◀─────▶│   Supabase Cloud DB  │
+  │ (Plasmo/React/TS)│       │ (Dashboard/Pay) │       │ (PostgreSQL, Auth)   │
+  └────────┬─────────┘       └────────┬────────┘       └──────────┬───────────┘
+           │                          │                           │
+           │ REST                     │ REST                      │ Client
+           ▼                          ▼                           ▼
+  ┌───────────────────────────────────────────────────────────────────────────┐
+  │                          Python / FastAPI Backend                         │
+  │     ┌───────────────────────┐             ┌────────────────────────┐      │
+  │     │   Prompt Optimizer    │             │   Subscription Webhook │      │
+  │     │   (LLM Inference)     │             │     (Razorpay Pay)     │      │
+  │     └───────────────────────┘             └────────────────────────┘      │
+  └─────────────────────────────────────┬─────────────────────────────────────┘
+                                        ▼
+                               ┌──────────────────┐
+                               │ Google Cloud Run │
+                               │  (Docker Deploy) │
+                               └──────────────────┘`
+  },
+
+  manager: {
+    id: 'manager',
+    emoji: '💼',
+    name: 'The Manager',
+    tagline: 'An AI-powered developer project manager and operations cockpit',
+    status: 'Completed',
+    role: 'Solo Developer',
+    platform: 'Web (Next.js + FastAPI)',
+    description: 'The Manager is a self-hosted developer operations cockpit designed to organize projects, tasks, milestones, environments, and secrets in a single dashboard. It features a keyboard-first Omnibar (Ctrl+K) supporting quick navigation, custom status/priority filters, and natural language command parsing (powered by Groq Llama 3.3). Includes a Developer Vault for secure API key and port allocation management, workflow triage matrix lanes, and cost/burn rate monitoring trackers.',
+    techStack: ['Next.js 15', 'App Router', 'TypeScript', 'Tailwind CSS', 'Zustand', 'FastAPI', 'SQLModel (SQLAlchemy)', 'PostgreSQL', 'SQLite', 'Groq SDK (Llama 3.3)', 'Docker Compose'],
+    features: [
+      'Omnibar (Ctrl+K): keyboard-first nav with slash commands (/p, /t, /goto) and filters (@, #, &, *)',
+      'AI Command Engine: Groq Llama 3.3 parsing natural language queries into structured database operations',
+      'Developer Vault: secure repository for API credentials, local ports registry, and hexagonal brand tokens',
+      'Workflow Triage Matrix: P0/P1/P2 priorities, focus lists, and automatic task classification',
+      'Environments Dashboard: tracks active setups, local host ports, and database sync metrics',
+      'AI Operations Logger: versions system prompts, monitors token windows, and logs API spend burn rates'
+    ],
+    screens: [
+      { name: 'Project Workspace', desc: 'Comprehensive cockpit showing active projects, blueprints, schemas, and schemas notes' },
+      { name: 'Omnibar Overlay', desc: 'Ctrl+K search interface with command suggestions and natural language parser input' },
+      { name: 'Task Board', desc: 'Interactive lanes representing priorities, showing triage matrices and AI categories' },
+      { name: 'Secret Vault', desc: 'Secure database listing host ports, passwords, API keys, and brand assets' },
+      { name: 'Environments Console', desc: 'List of running instances, host ports, and database connection sync logs' },
+      { name: 'AI Prompts & Costs', desc: 'Config logs showing system prompts, token usage, and API billing rates' }
+    ],
+    architecture: `
+  ┌────────────────────────────────────────────────────────┐
+  │                 Next.js 15 Web Client                  │
+  │   ┌───────────────┐  ┌───────────────┐ ┌───────────┐   │
+  │   │  Omnibar UI   │  │ Project Board │ │ Vault UI  │   │
+  │   └───────┬───────┘  └───────┬───────┘ └─────┬─────┘   │
+  └───────────┼──────────────────┼───────────────┼─────────┘
+              │                  │               │
+              ▼                  ▼               ▼  REST API
+  ┌────────────────────────────────────────────────────────┐
+  │                  Python / FastAPI Backend              │
+  │  ┌────────────────┐ ┌────────────────┐ ┌─────────────┐ │
+  │  │   SQLModel     │ │   AI Service   │ │ Port/Vault  │ │
+  │  │ (Postgre/Sqlite)│ │ (Groq Llama 3)│ │ Registry    │ │
+  │  └────────────────┘ └────────────────┘ └─────────────┘ │
+  └────────────────────────────────────────────────────────┘`
   }
 };
 
 // Project order for homepage grid (by recommended impact)
-const PROJECT_ORDER = ['medtrack', 'agrisense', 'urbanleafs', 'rebalance', 'nextmove', 'logic-grid', 'duel-fights'];
+const PROJECT_ORDER = ['medtrack', 'agrisense', 'aeroprompt', 'manager', 'urbanleafs', 'rebalance', 'nextmove', 'logic-grid', 'duel-fights'];
+
