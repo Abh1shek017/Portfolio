@@ -976,4 +976,20 @@
   opacity: 0.6;
 }
 
+/* --- AeroPrompt Custom Styles --- */
+.gallery--landscape .gallery__item img {
+  aspect-ratio: 16 / 10;
+}
+
+.project-detail__logo-img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+  border: 1.5px solid var(--border);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+
 
