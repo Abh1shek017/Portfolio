@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Contact Form Submission (Formspree AJAX) ---
+  // --- Contact Form Submission (FormSubmit AJAX) ---
   const contactForm = document.getElementById('contact-form');
   const formSuccessMessage = document.getElementById('form-success');
 
@@ -238,17 +238,21 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        if (response.ok) {
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && (data.success === 'true' || data.success === true || response.status === 200)) {
           formSuccessMessage.style.display = 'block';
+          formSuccessMessage.style.color = '#10b981';
+          formSuccessMessage.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+          formSuccessMessage.style.background = 'rgba(16, 185, 129, 0.1)';
           formSuccessMessage.textContent = 'Thank you! Your message has been sent successfully.';
           contactForm.reset();
         } else {
-          const data = await response.json();
           formSuccessMessage.style.display = 'block';
           formSuccessMessage.style.color = '#ef4444';
           formSuccessMessage.style.borderColor = 'rgba(239, 68, 68, 0.3)';
           formSuccessMessage.style.background = 'rgba(239, 68, 68, 0.1)';
-          formSuccessMessage.textContent = data.errors ? data.errors.map(err => err.message).join(', ') : 'Oops! There was a problem submitting your form.';
+          formSuccessMessage.textContent = data.message || (data.errors ? data.errors.map(err => err.message).join(', ') : 'Oops! There was a problem submitting your form.');
         }
       } catch (error) {
         formSuccessMessage.style.display = 'block';
