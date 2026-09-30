@@ -146,12 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (galleryItems.length > 0 && lightbox && lightboxImg) {
     // Gather all image URLs from gallery
-    galleryItems.forEach((item, index) => {
+    galleryItems.forEach(item => {
       const img = item.querySelector('img');
       if (img) {
+        const imgIndex = imagesList.length;
         imagesList.push(img.src);
         item.addEventListener('click', () => {
-          openLightbox(index);
+          openLightbox(imgIndex);
         });
       }
     });
@@ -199,10 +200,64 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function navigateLightbox(direction) {
-    if (currentImageIndex === -1) return;
+    if (currentImageIndex === -1 || imagesList.length === 0) return;
     currentImageIndex = (currentImageIndex + direction + imagesList.length) % imagesList.length;
     lightboxImg.src = imagesList[currentImageIndex];
   }
+
+  // --- Gallery "View More" Feature ---
+  const galleries = document.querySelectorAll('.gallery');
+  const INITIAL_VISIBLE_COUNT = 3;
+
+  galleries.forEach(gallery => {
+    const items = Array.from(gallery.querySelectorAll('.gallery__item'));
+    if (items.length > INITIAL_VISIBLE_COUNT) {
+      // Hide extra items initially
+      items.forEach((item, idx) => {
+        if (idx >= INITIAL_VISIBLE_COUNT) {
+          item.classList.add('gallery__item--hidden');
+        }
+      });
+
+      const remainingCount = items.length - INITIAL_VISIBLE_COUNT;
+      const actionsDiv = document.createElement('div');
+      actionsDiv.className = 'gallery__actions';
+
+      const toggleBtn = document.createElement('button');
+      toggleBtn.type = 'button';
+      toggleBtn.className = 'gallery__toggle';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.innerHTML = `<span>View More Screenshots (+${remainingCount})</span><span class="gallery__toggle-icon">↓</span>`;
+
+      let isExpanded = false;
+      toggleBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+
+        if (isExpanded) {
+          items.forEach((item, idx) => {
+            if (idx >= INITIAL_VISIBLE_COUNT) {
+              item.classList.remove('gallery__item--hidden');
+              item.classList.add('gallery__item--visible');
+            }
+          });
+          toggleBtn.innerHTML = `<span>Show Less</span><span class="gallery__toggle-icon">↑</span>`;
+        } else {
+          items.forEach((item, idx) => {
+            if (idx >= INITIAL_VISIBLE_COUNT) {
+              item.classList.remove('gallery__item--visible');
+              item.classList.add('gallery__item--hidden');
+            }
+          });
+          toggleBtn.innerHTML = `<span>View More Screenshots (+${remainingCount})</span><span class="gallery__toggle-icon">↓</span>`;
+          gallery.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+
+      actionsDiv.appendChild(toggleBtn);
+      gallery.insertAdjacentElement('afterend', actionsDiv);
+    }
+  });
 
   // --- Interactive Screen-by-Screen Breakdown ---
   const screenTableRows = document.querySelectorAll('.screen-table tr');

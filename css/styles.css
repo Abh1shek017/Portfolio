@@ -52,7 +52,7 @@
 
   /* --- Sizing --- */
   --container-max: 1200px;
-  --container-narrow: 800px;
+  --container-narrow: 1200px;
   --nav-height: 70px;
   --border-radius-sm: 6px;
   --border-radius-md: 10px;
