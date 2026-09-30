@@ -426,12 +426,20 @@
   flex-direction: column;
 }
 
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+  flex-wrap: wrap;
+}
+
 .project-card__name {
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: var(--space-xs);
 }
 
 .project-card__desc {

@@ -178,7 +178,7 @@ const PROJECTS = {
     emoji: '🌟',
     name: 'ReBalance',
     tagline: 'A digital wellness app that helps users manage screen time and build healthy digital habits',
-    status: 'Completed',
+    status: 'Archived',
     role: 'Solo Developer',
     platform: 'Android',
     description: 'ReBalance is a comprehensive digital wellness application that helps users take control of their screen time. It features real-time usage tracking, a unique "Digital Calorie" gamification system that converts screen time into calories with category-based multipliers, smart app limits with blocking capabilities, contextual activity suggestions with streak tracking, and intelligent notifications. Built with Flutter using Provider state management and Hive for local persistence.',
@@ -212,7 +212,7 @@ const PROJECTS = {
     emoji: '🚗',
     name: 'NextMove',
     tagline: 'A mobility mode prediction app that detects and tracks transportation modes using ML',
-    status: 'In Progress',
+    status: 'Archived',
     role: 'App Developer',
     platform: 'Android + Python Backend',
     description: 'NextMove is a mobility tracking application that uses machine learning to predict and detect transportation modes (walking, driving, cycling, etc.). It features real-time trip tracking with GPS, OTP-based phone authentication via Twilio, trip history with analytics, and a Python/FastAPI backend with ML model for mode prediction.',
@@ -262,7 +262,7 @@ const PROJECTS = {
     emoji: '🧩',
     name: 'Logic Grid',
     tagline: 'A puzzle/strategy game with levels, leaderboards, community features, and cloud sync',
-    status: 'In Progress',
+    status: 'Work in Progress',
     role: 'Solo Developer',
     platform: 'Android',
     description: 'Logic Grid is a feature-rich puzzle/strategy game built with Flutter. It includes a level selection system, algorithm-driven name generation, community features, seasonal events, rewards system, player statistics, and cloud sync via Supabase. Integrates Google Play Games Services for achievements and leaderboards, Google AdMob for monetization, and audio for immersive gameplay.',
@@ -300,7 +300,7 @@ const PROJECTS = {
     emoji: '🎮',
     name: 'Duel Fights',
     tagline: 'A multiplayer Pong-style fighting game with nearby device connectivity',
-    status: 'In Progress',
+    status: 'Archived',
     role: 'Solo Developer',
     platform: 'Android',
     description: 'Duel Fights is a real-time multiplayer fighting/pong game built with Flutter and the Flame game engine. Players can connect with nearby devices using Google\'s Nearby Connections API for local multiplayer gameplay. Features offline and online game modes, a lobby system for matchmaking, and Flame-powered game rendering with smooth physics and animations.',
@@ -376,7 +376,7 @@ const PROJECTS = {
     emoji: '💼',
     name: 'The Manager',
     tagline: 'An AI-powered developer project manager and operations cockpit',
-    status: 'Completed',
+    status: 'Work in Progress',
     role: 'Solo Developer',
     platform: 'Web (Next.js + FastAPI)',
     description: 'The Manager is a self-hosted developer operations cockpit designed to organize projects, tasks, milestones, environments, and secrets in a single dashboard. It features a keyboard-first Omnibar (Ctrl+K) supporting quick navigation, custom status/priority filters, and natural language command parsing (powered by Groq Llama 3.3). Includes a Developer Vault for secure API key and port allocation management, workflow triage matrix lanes, and cost/burn rate monitoring trackers.',
@@ -416,6 +416,6 @@ const PROJECTS = {
   }
 };
 
-// Project order for homepage grid (by recommended impact)
-const PROJECT_ORDER = ['medtrack', 'agrisense', 'aeroprompt', 'manager', 'urbanleafs', 'rebalance', 'nextmove', 'logic-grid', 'duel-fights'];
+// Project order for homepage grid
+const PROJECT_ORDER = ['logic-grid', 'medtrack', 'urbanleafs', 'aeroprompt', 'manager', 'agrisense', 'rebalance', 'nextmove', 'duel-fights'];
 
