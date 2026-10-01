@@ -24,6 +24,7 @@
         <a href="../index.html#about" class="nav__link">About</a>
         <a href="../index.html#skills" class="nav__link">Skills</a>
         <a href="../index.html#projects" class="nav__link nav__link--active">Projects</a>
+        <a href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="nav__link">Resume</a>
         <a href="../index.html#contact" class="nav__link">Contact</a>
       </div>
 
@@ -46,6 +47,7 @@
     <a href="../index.html#about" class="mobile-nav__link">About</a>
     <a href="../index.html#skills" class="mobile-nav__link">Skills</a>
     <a href="../index.html#projects" class="mobile-nav__link">Projects</a>
+    <a href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav__link">Resume</a>
     <a href="../index.html#contact" class="mobile-nav__link">Contact</a>
   </div>
 
@@ -66,70 +68,115 @@
           <span class="badge badge--accent">Solo Developer</span>
         </h1>
         <p class="project-detail__tagline">
-          A back-office pharmacy management app for procurement, stock, and credit tracking.
+          A back-office pharmacy management app for procurement, stock, and credit tracking. Completed, in use by a business.
         </p>
         <div class="project-detail__meta">
-          <span><strong>Platform:</strong> Android (Flutter) + Python Backend</span>
+          <span><strong>Platform:</strong> Android (Flutter)</span>
           <span>•</span>
-          <span><strong>Source Code:</strong> Private</span>
+          <span><strong>Role:</strong> Solo Developer</span>
+          <span>•</span>
+          <span><strong>Status:</strong> Completed</span>
+          <span>•</span>
+          <span><strong>Source:</strong> Private</span>
+          <span>•</span>
+          <span><strong>Demo:</strong> Private APK</span>
         </div>
       </header>
 
       <!-- Tech Stack Badges -->
-      <section class="tech-stack">
-        <span class="badge badge--accent">Flutter</span>
-        <span class="badge badge--accent">Dart</span>
-        <span class="badge badge--accent">Riverpod</span>
-        <span class="badge badge--accent">Drift (SQLite)</span>
-        <span class="badge">Go Router</span>
-        <span class="badge">Freezed</span>
-        <span class="badge">Barcode Scanner</span>
-        <span class="badge">PDF Generation</span>
-        <span class="badge">Python</span>
-        <span class="badge">FastAPI</span>
-        <span class="badge">PostgreSQL</span>
-        <span class="badge">Alembic</span>
-        <span class="badge">Docker</span>
-        <span class="badge">Firebase Admin SDK</span>
+      <section class="tech-stack" style="display: flex; flex-direction: column; gap: var(--space-sm);">
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-right: var(--space-sm); display: inline-block; min-width: 140px;">Mobile:</span>
+          <span class="badge badge--accent">Flutter</span>
+          <span class="badge badge--accent">Dart</span>
+          <span class="badge badge--accent">Riverpod</span>
+          <span class="badge badge--accent">Drift</span>
+          <span class="badge">Go Router</span>
+          <span class="badge">Freezed</span>
+          <span class="badge">Barcode Scanner</span>
+          <span class="badge">PDF Generation</span>
+        </div>
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-right: var(--space-sm); display: inline-block; min-width: 140px;">Backend &amp; Cloud:</span>
+          <span class="badge badge--accent">Python</span>
+          <span class="badge badge--accent">FastAPI</span>
+          <span class="badge badge--accent">PostgreSQL</span>
+          <span class="badge">Alembic</span>
+          <span class="badge">Docker</span>
+          <span class="badge">Firebase Admin SDK</span>
+          <span class="badge">Gemini API</span>
+          <span class="badge badge--accent">Oracle Cloud</span>
+        </div>
       </section>
 
-      <!-- Detailed Description -->
+      <!-- Detailed Description: Problem / Solution / Engineering -->
       <section class="section-content reveal">
         <h2>About MedTrack</h2>
-        <p>
-          MedTrack is a specialized back-office business management application engineered for independent pharmacy owners. Unlike traditional retail Point-of-Sale (POS) interfaces, MedTrack focuses entirely on administrative workflows behind the counter. It manages procurement relationships, tracking complex inventory down to unique batches, and monitors balances with medical distributors.
-        </p>
-        <p>
-          The application also provides a lightweight Udhaar (credit) ledger to track informal financing extended to local customers. A dedicated B2B module handles wholesale invoicing, business validation checks (Drug License, GSTIN), and records physical stock reductions. To maintain high availability, the app features an offline-first architecture powered by Flutter/Drift SQLite database syncing with a robust FastAPI cloud engine.
-        </p>
+        <div style="margin-bottom: var(--space-md);">
+          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Problem</h3>
+          <p>Independent pharmacies track medicine batches and expiry dates, distributor balances, and informal customer credit across separate records.</p>
+        </div>
+        <div style="margin-bottom: var(--space-md);">
+          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Solution</h3>
+          <p>A back-office app covering procurement, batch-level stock, supplier payments, B2B invoicing, and a credit ledger.</p>
+        </div>
+        <div>
+          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Engineering</h3>
+          <p>Built with Flutter and Riverpod using an offline-first architecture powered by Drift (SQLite). Local data syncs to a Python/FastAPI backend with PostgreSQL, Alembic migrations, and Docker, hosted on Oracle Cloud Infrastructure (OCI). Implements biometric login, email OTP 2FA, device-session revocation, and Gemini API for bill parsing. Supports Admin and Staff roles.</p>
+        </div>
       </section>
 
-      <!-- Key Features Grid -->
+      <!-- Primary Key Features -->
       <section class="section-content reveal" style="margin-top: var(--space-xl);">
-        <h2>Key Modules & Features</h2>
+        <h2>Core Modules</h2>
         <ul class="feature-list">
           <li class="feature-list__item">
             <span class="feature-list__icon">📦</span>
             <div>
-              <strong>Batch & Stock Management:</strong> Track medicine batches with custom expiry dates, MRP, purchase rates, and quantities.
+              <strong>Offline-first inventory:</strong> Drift/SQLite local database with full offline read/write capability.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🏷️</span>
+            <div>
+              <strong>Batch &amp; expiry tracking:</strong> Track medicine batches with custom expiry dates, MRP, purchase rates, and quantities.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">🤝</span>
             <div>
-              <strong>Distributor Relations:</strong> Log invoices, track outstanding balances, and record partial/full settlement payments.
+              <strong>Supplier ledger:</strong> Log distributor invoices, track outstanding balances, and record settlement payments.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">🏪</span>
             <div>
-              <strong>B2B Wholesale Channel:</strong> Sell to clinics and minor shops, validate DL/GSTIN credentials, and auto-decrement stock.
+              <strong>B2B invoicing:</strong> Sell to clinics and shops with DL/GSTIN validation and automated stock decrementing.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">📓</span>
             <div>
-              <strong>Udhaar Individual Credit:</strong> Log simple credits given to trusted individuals and track repayments without customer billing.
+              <strong>Credit tracking:</strong> Log informal customer credit (Udhaar) and repayments.
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon">📄</span>
+            <div>
+              <strong>Reports &amp; analytics:</strong> Generate low-stock alerts, expiry notifications, spend analysis, and PDF exports.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Additional Modules & Full Feature List -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>All Modules &amp; Features</h2>
+        <ul class="feature-list">
+          <li class="feature-list__item">
+            <span class="feature-list__icon">🤖</span>
+            <div>
+              <strong>AI bill parsing (Gemini):</strong> Extract product, batch, and pricing details from supplier bills using Gemini API.
             </div>
           </li>
           <li class="feature-list__item">
@@ -141,27 +188,43 @@
           <li class="feature-list__item">
             <span class="feature-list__icon">⚡</span>
             <div>
-              <strong>Smart Sourcing:</strong> Create draft orders with automated scoring to suggest the best supplier based on price history.
+              <strong>Smart Sourcing:</strong> Create draft orders with automated scoring to suggest suppliers based on purchase history.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">🔍</span>
             <div>
-              <strong>Global Search FTS5:</strong> Instant offline results across products, invoices, and customers, categorized by type.
+              <strong>Global Search FTS5:</strong> Offline SQLite full-text search across products, invoices, and customers.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">🛡️</span>
             <div>
-              <strong>Security Suite:</strong> Biometric login locks, Two-Factor Authentication (2FA via email OTP), and active device session revoking.
+              <strong>Authentication &amp; Access:</strong> Biometric login, email OTP 2FA, device-session revocation, and Admin / Staff role-based access.
             </div>
           </li>
           <li class="feature-list__item">
-            <span class="feature-list__icon">📄</span>
+            <span class="feature-list__icon">📱</span>
             <div>
-              <strong>Reporting & PDFs:</strong> Generate expiry notifications, low stock alerts, spend analysis, and export statements to PDFs.
+              <strong>Barcode Scanner:</strong> Barcode scanning for product identification and inventory management.
             </div>
           </li>
+        </ul>
+      </section>
+
+      <!-- Technical Highlights -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Technical Highlights</h2>
+        <ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 1.8; color: var(--text-secondary);">
+          <li>Offline-first local database (Drift/SQLite)</li>
+          <li>REST API (FastAPI) with PostgreSQL and Alembic migrations</li>
+          <li>Riverpod state management</li>
+          <li>Gemini API bill parsing</li>
+          <li>Biometric login, email OTP 2FA, device-session revocation</li>
+          <li>PDF generation</li>
+          <li>Barcode scanning</li>
+          <li>FTS5 offline search</li>
+          <li>Dockerized backend hosted on Oracle Cloud Infrastructure</li>
         </ul>
       </section>
 
@@ -173,7 +236,7 @@
           <thead>
             <tr>
               <th>Screen</th>
-              <th>Functionality & Interactive Role</th>
+              <th>Functionality &amp; Interactive Role</th>
             </tr>
           </thead>
           <tbody>
@@ -182,7 +245,7 @@
               <td>Summarizes payables, upcoming payments, critical stock levels, and expiring batches. Provides global search.</td>
             </tr>
             <tr>
-              <td class="screen-name">Products & Batches</td>
+              <td class="screen-name">Products &amp; Batches</td>
               <td>Lists all items. Expanding an item reveals unique batch details, dates, and current stock.</td>
             </tr>
             <tr>
@@ -190,7 +253,7 @@
               <td>Distributor contacts, outstanding ledger, smart sourcing score, and purchase logs.</td>
             </tr>
             <tr>
-              <td class="screen-name">Bills & Procurement</td>
+              <td class="screen-name">Bills &amp; Procurement</td>
               <td>Interface to receive stock invoices from suppliers, verifying quantities and batch labels.</td>
             </tr>
             <tr>
@@ -218,25 +281,29 @@
         <h2>Architecture Diagram</h2>
         <div class="architecture">
           <pre>
-  ┌──────────────────────────────────────────────────────┐
-  │                   Flutter Mobile App                  │
-  │  ┌─────────┐  ┌──────────┐  ┌──────────────────────┐ │
-  │  │ Screens │──│ Providers│──│ Drift (SQLite) Local │ │
-  │  │  (UI)   │  │(Riverpod)│  │     Database         │ │
-  │  └─────────┘  └──────────┘  └──────────┬───────────┘ │
-  └────────────────────────────────────────┼─────────────┘
-                                           │ Sync (HTTPS)
-                                           ▼
-              ┌────────────────────────────────────────┐
-              │          Python / FastAPI Backend       │
-              │  ┌──────────┐  ┌──────────────────────┐│
-              │  │  Routes  │──│  PostgreSQL Database  ││
-              │  │  (REST)  │  │  (Alembic Migrations) ││
-              │  └──────────┘  └──────────────────────┘│
-              │  ┌──────────────────────────────────┐  │
-              │  │  Firebase Admin SDK (Auth/Push)  │  │
-              │  └──────────────────────────────────┘  │
-              └────────────────────────────────────────┘</pre>
+  ┌──────────────────────────────────────────────────────────────┐
+  │                      Flutter Mobile App                      │
+  │  ┌─────────┐  ┌──────────┐  ┌──────────────────────────────┐ │
+  │  │ Screens │──│ Providers│──│ Drift (SQLite) Local Database │ │
+  │  │  (UI)   │  │(Riverpod)│  │     (FTS5 Search, Offline)   │ │
+  │  └─────────┘  └──────────┘  └──────────────┬───────────────┘ │
+  └────────────────────────────────────────────┼─────────────────┘
+                                               │ Sync (HTTPS)
+                                               ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │         Oracle Cloud (OCI) Hosted Backend (Docker)           │
+  │  ┌────────────────────────────────────────────────────────┐  │
+  │  │                Python / FastAPI Backend                │  │
+  │  │  ┌──────────┐  ┌────────────────────────────────────┐  │  │
+  │  │  │  Routes  │──│ PostgreSQL (Alembic Migrations)    │  │  │
+  │  │  │  (REST)  │  │                                    │  │  │
+  │  │  └────┬─────┘  └────────────────────────────────────┘  │  │
+  │  │       │                                                │  │
+  │  │  ┌────▼────────────────────────┐ ┌──────────────────┐  │  │
+  │  │  │ Gemini API (Bill Parsing)   │ │Firebase Admin SDK│  │  │
+  │  │  └─────────────────────────────┘ └──────────────────┘  │  │
+  │  └────────────────────────────────────────────────────────┘  │
+  └──────────────────────────────────────────────────────────────┘</pre>
         </div>
       </section>
 
@@ -246,43 +313,43 @@
         <p class="text-muted" style="margin-bottom: var(--space-md);">Click on a screen preview to view it in high resolution.</p>
         <div class="gallery">
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Home Screen.jpeg" alt="MedTrack Home Dashboard" loading="lazy">
+            <img src="../assets/MedTrack/home-screen.jpeg" alt="MedTrack Home Dashboard" loading="lazy">
             <div class="gallery__item-label">Home Dashboard</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Products Screen.jpeg" alt="MedTrack Products Screen" loading="lazy">
+            <img src="../assets/MedTrack/products-screen.jpeg" alt="MedTrack Products Screen" loading="lazy">
             <div class="gallery__item-label">Products &amp; Batches</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Suppliers Screen.jpeg" alt="MedTrack Suppliers Screen" loading="lazy">
-            <div class="gallery__item-label">Suppliers Directory</div>
-          </div>
-          <div class="gallery__item">
-            <img src="../assets/MedTrack/Report 1.jpeg" alt="MedTrack Report 1" loading="lazy">
+            <img src="../assets/MedTrack/report-1.jpeg" alt="MedTrack Report 1" loading="lazy">
             <div class="gallery__item-label">Reports Overview</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Report 2.jpeg" alt="MedTrack Report 2" loading="lazy">
+            <img src="../assets/MedTrack/suppliers-screen.jpeg" alt="MedTrack Suppliers Screen" loading="lazy">
+            <div class="gallery__item-label">Suppliers Directory</div>
+          </div>
+          <div class="gallery__item">
+            <img src="../assets/MedTrack/report-2.jpeg" alt="MedTrack Report 2" loading="lazy">
             <div class="gallery__item-label">Expiry Alerts Report</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Report 3.jpeg" alt="MedTrack Report 3" loading="lazy">
+            <img src="../assets/MedTrack/report-3.jpeg" alt="MedTrack Report 3" loading="lazy">
             <div class="gallery__item-label">Low Stock Report</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Report 4.jpeg" alt="MedTrack Report 4" loading="lazy">
+            <img src="../assets/MedTrack/report-4.jpeg" alt="MedTrack Report 4" loading="lazy">
             <div class="gallery__item-label">Payment History Report</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Report 5.jpeg" alt="MedTrack Report 5" loading="lazy">
+            <img src="../assets/MedTrack/report-5.jpeg" alt="MedTrack Report 5" loading="lazy">
             <div class="gallery__item-label">Analytics Report</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Notification Settings.jpeg" alt="MedTrack Notification Settings" loading="lazy">
+            <img src="../assets/MedTrack/notification-settings.jpeg" alt="MedTrack Notification Settings" loading="lazy">
             <div class="gallery__item-label">Notification Settings</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/MedTrack/Profile Screen.jpeg" alt="MedTrack Profile Screen" loading="lazy">
+            <img src="../assets/MedTrack/profile-screen.jpeg" alt="MedTrack Profile Screen" loading="lazy">
             <div class="gallery__item-label">Profile &amp; Security</div>
           </div>
         </div>

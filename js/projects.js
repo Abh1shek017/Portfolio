@@ -12,8 +12,8 @@ const PROJECTS = {
     status: 'Completed',
     role: 'Solo Developer',
     platform: 'Android + Python Backend',
-    description: 'MedTrack is a personal back-office system for independent pharmacy owners to manage everything behind the counter — the business relationship with distributors, stock/inventory management with batch & expiry tracking, B2B wholesale sales to clinics/shops, individual customer credit (Udhaar) tracking, expense management, smart distributor recommendations, and comprehensive reporting with PDF export. Features offline-first architecture with Drift/SQLite and a Python/FastAPI backend with PostgreSQL.',
-    techStack: ['Flutter', 'Dart', 'Riverpod', 'Drift (SQLite)', 'Go Router', 'Freezed', 'Barcode Scanner', 'PDF Generation', 'Google Fonts', 'Python', 'FastAPI', 'PostgreSQL', 'Alembic', 'Docker', 'Firebase Admin SDK'],
+    description: 'MedTrack is a personal back-office system for independent pharmacy owners to manage everything behind the counter — the business relationship with distributors, stock/inventory management with batch & expiry tracking, B2B wholesale sales to clinics/shops, individual customer credit (Udhaar) tracking, expense management, smart distributor recommendations, and reporting with PDF export. Features offline-first architecture with Drift/SQLite and a Python/FastAPI backend with PostgreSQL.',
+    techStack: ['Flutter', 'Dart', 'Riverpod', 'Drift (SQLite)', 'Go Router', 'Freezed', 'Barcode Scanner', 'PDF Generation', 'Python', 'FastAPI', 'PostgreSQL', 'Alembic', 'Docker', 'Firebase Admin SDK', 'Gemini API', 'Oracle Cloud'],
     features: [
       'Product & Batch Management with MRP, expiry, and purchase rate tracking',
       'Supplier/Distributor Management with contacts and outstanding balance',
@@ -123,11 +123,11 @@ const PROJECTS = {
     id: 'urbanleafs',
     emoji: '🌿',
     name: 'UrbanLeafs',
-    tagline: 'A comprehensive business management app for small to medium enterprises',
+    tagline: 'A business management app for small to medium enterprises',
     status: 'Completed',
     role: 'Solo Developer',
     platform: 'Android',
-    description: 'UrbanLeafs is a full-featured business management Flutter application designed for small to medium enterprises to manage daily operations including attendance tracking, inventory management, order processing, payment tracking, expense management, and financial reporting. Features role-based access control, real-time dashboards, and Material Design 3 UI.',
+    description: 'UrbanLeafs is a business management Flutter application designed for small to medium enterprises to manage daily operations including attendance tracking, inventory management, order processing, payment tracking, expense management, and financial reporting. Features role-based access control (Admin and Staff), real-time dashboards, and Material Design 3 UI.',
     techStack: ['Flutter', 'Dart', 'Riverpod', 'Firebase Firestore', 'Firebase Auth', 'Firebase Storage', 'Go Router', 'Freezed', 'Shared Preferences', 'Material Design 3', 'Google Fonts', 'Table Calendar'],
     features: [
       'Real-time Dashboard with live statistics and date navigation',
@@ -137,7 +137,7 @@ const PROJECTS = {
       'Payment Management (cash/online) with daily revenue tracking',
       'Expense Management with categories and cost analysis',
       'Balance Sheet with financial overview and customer details',
-      'User Management with role-based access control (Admin/Regular)',
+      'User Management with role-based access control (Admin/Staff)',
       'Settings with dark/light theme, language, and notifications'
     ],
     screens: [
@@ -147,7 +147,7 @@ const PROJECTS = {
       { name: 'Order Management', desc: 'Create and manage customer orders with status tracking' },
       { name: 'Payment Management', desc: 'Record payments (cash/online), track daily revenue' },
       { name: 'Expense Management', desc: 'Log and categorize business expenses' },
-      { name: 'Balance Sheet', desc: 'Comprehensive financial reporting with customer-wise details' },
+      { name: 'Balance Sheet', desc: 'Financial reporting with customer-wise details' },
       { name: 'Settings', desc: 'Theme toggle, language, notifications, privacy controls' },
       { name: 'Profile', desc: 'User profile customization and password management' }
     ],
@@ -181,7 +181,7 @@ const PROJECTS = {
     status: 'Archived',
     role: 'Solo Developer',
     platform: 'Android',
-    description: 'ReBalance is a comprehensive digital wellness application that helps users take control of their screen time. It features real-time usage tracking, a unique "Digital Calorie" gamification system that converts screen time into calories with category-based multipliers, smart app limits with blocking capabilities, contextual activity suggestions with streak tracking, and intelligent notifications. Built with Flutter using Provider state management and Hive for local persistence.',
+    description: 'ReBalance is a digital wellness application that helps users take control of their screen time. It features real-time usage tracking, a "Digital Calorie" gamification system that converts screen time into calories with category-based multipliers, app limits with blocking capabilities, contextual activity suggestions with streak tracking, and notifications. Built with Flutter using Provider state management and Hive for local persistence.',
     techStack: ['Flutter', 'Dart', 'Provider', 'Hive', 'Android UsageStats API', 'Flutter Local Notifications', 'Flutter Overlay Window', 'FL Chart', 'Permission Handler'],
     features: [
       'Real-time app usage monitoring via Android UsageStats API',
@@ -261,11 +261,11 @@ const PROJECTS = {
     id: 'logic-grid',
     emoji: '🧩',
     name: 'Logic Grid',
-    tagline: 'A puzzle/strategy game with levels, leaderboards, community features, and cloud sync',
-    status: 'Work in Progress',
+    tagline: 'A puzzle and strategy mobile game with levels, leaderboards, and cloud sync',
+    status: 'In Development',
     role: 'Solo Developer',
     platform: 'Android',
-    description: 'Logic Grid is a feature-rich puzzle/strategy game built with Flutter. It includes a level selection system, algorithm-driven name generation, community features, seasonal events, rewards system, player statistics, and cloud sync via Supabase. Integrates Google Play Games Services for achievements and leaderboards, Google AdMob for monetization, and audio for immersive gameplay.',
+    description: 'Logic Grid is a grid-based puzzle and strategy mobile game built with Flutter and Dart. Designed for single-player problem-solving, featuring a progression of grid levels, cloud sync for save states, and leaderboard rankings. Integrates Supabase for cloud sync, Google Play Games Services for achievements and leaderboards, and Google AdMob for monetization.',
     techStack: ['Flutter', 'Dart', 'Provider', 'Hive', 'Supabase', 'Google Play Games Services', 'Google AdMob', 'AudioPlayers', 'Google Fonts', 'Connectivity Plus'],
     features: [
       'Grid-based puzzle/strategy gameplay with level progression',
@@ -327,10 +327,10 @@ const PROJECTS = {
     emoji: '🚀',
     name: 'AeroPrompt',
     tagline: 'An AI prompt optimizer browser extension and companion website',
-    status: 'Completed',
+    status: 'Live',
     role: 'Full Stack Developer',
     platform: 'Web + Browser Extension + API Backend',
-    description: 'AeroPrompt is a comprehensive AI prompt optimization system designed to elevate interactions with LLMs. Fusing a Chrome browser extension built with Plasmo and TypeScript with a Next.js companion landing website and a FastAPI python backend. It intercepts prompts, analyzes dialogue history for context coherence, uses user Bio personalization, and adjusts tones (Professional, Concise, Friendly, Persuasive) to return polished "Super Prompts". Supported by Supabase database / authentication and Razorpay webhook integrations.',
+    description: 'AeroPrompt is an AI prompt optimization utility designed to format prompts for LLMs. Fusing a Chrome browser extension built with Plasmo and TypeScript with a Next.js companion landing website and a FastAPI python backend. It intercepts prompts, analyzes dialogue history for context coherence, uses user Bio personalization, and adjusts tones (Professional, Concise, Friendly, Persuasive) to return structured prompts. Supported by Supabase database / authentication and Razorpay webhook integrations.',
     techStack: ['Next.js', 'React.js', 'TypeScript', 'TailwindCSS', 'Plasmo', 'FastAPI', 'Python', 'Supabase', 'PostgreSQL', 'Docker', 'Google Cloud Run', 'Razorpay', 'Resend'],
     features: [
       'Smart Enter: intercepts Enter key to automatically optimize prompts before submission',
@@ -339,15 +339,15 @@ const PROJECTS = {
       'Tone adjustments: select from Professional, Friendly, Concise, and Persuasive tones',
       'Multi-Platform content injectors adapting to ChatGPT, Claude, and Gemini inputs',
       'Subscription portal with Razorpay payment processing and billing webhooks',
-      'Secure guest/user authentication flow managed by Supabase Auth',
+      'Authentication flow managed by Supabase Auth',
       'Dockerized Google Cloud Run microservice deployment pipeline'
     ],
     screens: [
-      { name: 'Extension Popup UI', desc: 'Sleek toggle panels, status monitors, and custom tone dropdown select menus' },
+      { name: 'Extension Popup UI', desc: 'Toggle panels, status monitors, and custom tone dropdown select menus' },
       { name: 'Platform Overlays', desc: 'Injected interface buttons and triggers on ChatGPT and Claude input wrappers' },
       { name: 'Marketing Website', desc: 'Landing homepage displaying product analytics, feature lists, and dynamic interactive demos' },
       { name: 'Subscription Center', desc: 'User checkout paths, billing intervals, and integrated Razorpay payment frames' },
-      { name: 'User Profile Dashboard', desc: 'Secure console displaying active session lists, payment history, and custom bio editors' }
+      { name: 'User Profile Dashboard', desc: 'Console displaying active session lists, payment history, and custom bio editors' }
     ],
     architecture: `
   ┌──────────────────┐       ┌─────────────────┐       ┌──────────────────────┐
@@ -379,21 +379,21 @@ const PROJECTS = {
     status: 'Work in Progress',
     role: 'Solo Developer',
     platform: 'Web (Next.js + FastAPI)',
-    description: 'The Manager is a self-hosted developer operations cockpit designed to organize projects, tasks, milestones, environments, and secrets in a single dashboard. It features a keyboard-first Omnibar (Ctrl+K) supporting quick navigation, custom status/priority filters, and natural language command parsing (powered by Groq Llama 3.3). Includes a Developer Vault for secure API key and port allocation management, workflow triage matrix lanes, and cost/burn rate monitoring trackers.',
+    description: 'The Manager is a self-hosted developer operations cockpit designed to organize projects, tasks, milestones, environments, and secrets in a single dashboard. It features a keyboard-first Omnibar (Ctrl+K) supporting quick navigation, custom status/priority filters, and natural language command parsing (powered by Groq Llama 3.3). Includes a Developer Vault for API key and port allocation management, workflow triage matrix lanes, and cost/burn rate monitoring trackers.',
     techStack: ['Next.js 15', 'App Router', 'TypeScript', 'Tailwind CSS', 'Zustand', 'FastAPI', 'SQLModel (SQLAlchemy)', 'PostgreSQL', 'SQLite', 'Groq SDK (Llama 3.3)', 'Docker Compose'],
     features: [
       'Omnibar (Ctrl+K): keyboard-first nav with slash commands (/p, /t, /goto) and filters (@, #, &, *)',
       'AI Command Engine: Groq Llama 3.3 parsing natural language queries into structured database operations',
-      'Developer Vault: secure repository for API credentials, local ports registry, and hexagonal brand tokens',
+      'Developer Vault: repository for API credentials, local ports registry, and brand tokens',
       'Workflow Triage Matrix: P0/P1/P2 priorities, focus lists, and automatic task classification',
       'Environments Dashboard: tracks active setups, local host ports, and database sync metrics',
       'AI Operations Logger: versions system prompts, monitors token windows, and logs API spend burn rates'
     ],
     screens: [
-      { name: 'Project Workspace', desc: 'Comprehensive cockpit showing active projects, blueprints, schemas, and schemas notes' },
+      { name: 'Project Workspace', desc: 'Cockpit showing active projects, blueprints, schemas, and schemas notes' },
       { name: 'Omnibar Overlay', desc: 'Ctrl+K search interface with command suggestions and natural language parser input' },
       { name: 'Task Board', desc: 'Interactive lanes representing priorities, showing triage matrices and AI categories' },
-      { name: 'Secret Vault', desc: 'Secure database listing host ports, passwords, API keys, and brand assets' },
+      { name: 'Secret Vault', desc: 'Database listing host ports, passwords, API keys, and brand assets' },
       { name: 'Environments Console', desc: 'List of running instances, host ports, and database connection sync logs' },
       { name: 'AI Prompts & Costs', desc: 'Config logs showing system prompts, token usage, and API billing rates' }
     ],
@@ -417,5 +417,5 @@ const PROJECTS = {
 };
 
 // Project order for homepage grid
-const PROJECT_ORDER = ['logic-grid', 'medtrack', 'urbanleafs', 'aeroprompt', 'manager', 'agrisense', 'rebalance', 'nextmove', 'duel-fights'];
+const PROJECT_ORDER = ['medtrack', 'urbanleafs', 'logic-grid', 'aeroprompt', 'manager', 'agrisense', 'rebalance', 'nextmove', 'duel-fights'];
 

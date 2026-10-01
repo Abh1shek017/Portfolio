@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Typing Animation (Hero Section) ---
   const dynamicText = document.getElementById('dynamic-text');
   if (dynamicText) {
-    const words = ['Full Stack Developer', 'Flutter Expert', 'IoT + ML Builder', 'Tech Innovator'];
+    const words = ['Flutter Developer', 'Mobile App Engineer', 'Backend & Cloud Builder', 'Full Stack Developer'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

@@ -24,6 +24,7 @@
         <a href="../index.html#about" class="nav__link">About</a>
         <a href="../index.html#skills" class="nav__link">Skills</a>
         <a href="../index.html#projects" class="nav__link nav__link--active">Projects</a>
+        <a href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="nav__link">Resume</a>
         <a href="../index.html#contact" class="nav__link">Contact</a>
       </div>
 
@@ -46,6 +47,7 @@
     <a href="../index.html#about" class="mobile-nav__link">About</a>
     <a href="../index.html#skills" class="mobile-nav__link">Skills</a>
     <a href="../index.html#projects" class="mobile-nav__link">Projects</a>
+    <a href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav__link">Resume</a>
     <a href="../index.html#contact" class="mobile-nav__link">Contact</a>
   </div>
 
@@ -66,74 +68,103 @@
           <span class="badge badge--accent">Solo Developer</span>
         </h1>
         <p class="project-detail__tagline">
-          A comprehensive business management application for small to medium enterprises.
+          A business operations application for attendance, inventory, orders, payments, and expenses. Completed, in use by a business.
         </p>
         <div class="project-detail__meta">
           <span><strong>Platform:</strong> Android (Flutter)</span>
           <span>•</span>
-          <span><strong>Source Code:</strong> Private</span>
+          <span><strong>Role:</strong> Solo Developer</span>
+          <span>•</span>
+          <span><strong>Status:</strong> Completed</span>
+          <span>•</span>
+          <span><strong>Source:</strong> Private</span>
         </div>
       </header>
 
       <!-- Tech Stack Badges -->
-      <section class="tech-stack">
-        <span class="badge badge--accent">Flutter</span>
-        <span class="badge badge--accent">Dart</span>
-        <span class="badge badge--accent">Riverpod</span>
-        <span class="badge badge--accent">Firebase Firestore</span>
-        <span class="badge badge--accent">Firebase Auth</span>
-        <span class="badge badge--accent">Firebase Storage</span>
-        <span class="badge">Go Router</span>
-        <span class="badge">Freezed</span>
-        <span class="badge">Shared Preferences</span>
-        <span class="badge">Material Design 3</span>
-        <span class="badge">Google Fonts</span>
-        <span class="badge">Table Calendar</span>
+      <section class="tech-stack" style="display: flex; flex-direction: column; gap: var(--space-sm);">
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-right: var(--space-sm); display: inline-block; min-width: 140px;">Mobile &amp; State:</span>
+          <span class="badge badge--accent">Flutter</span>
+          <span class="badge badge--accent">Dart</span>
+          <span class="badge badge--accent">Riverpod</span>
+          <span class="badge">Go Router</span>
+          <span class="badge">Freezed</span>
+          <span class="badge">Material Design 3</span>
+          <span class="badge">Shared Preferences</span>
+          <span class="badge">Table Calendar</span>
+          <span class="badge">Google Fonts</span>
+        </div>
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-right: var(--space-sm); display: inline-block; min-width: 140px;">Backend &amp; Services:</span>
+          <span class="badge badge--accent">Firebase</span>
+          <span class="badge badge--accent">Firestore</span>
+          <span class="badge badge--accent">Firebase Auth</span>
+          <span class="badge badge--accent">Firebase Storage</span>
+        </div>
       </section>
 
-      <!-- Detailed Description -->
+      <!-- Detailed Description: Problem / Solution / Engineering -->
       <section class="section-content reveal">
         <h2>About UrbanLeafs</h2>
-        <p>
-          UrbanLeafs is a comprehensive mobile solution engineered to digitize and manage daily operations for small and medium-sized enterprises (SMEs). Developed using Flutter with Riverpod for reactive state management, the application provides business owners with instant visibility into employee actions, inventory flows, and sales statistics.
-        </p>
-        <p>
-          The architecture connects directly to Firebase services, using Cloud Firestore for low-latency operational sync, Firebase Authentication for secure email/password credential management, and Cloud Storage for file attachments. The user interface uses Material Design 3 specifications with dark/light visual settings, localization rules, and responsive grid layouts designed to operate smoothly on varied tablet and smartphone viewports.
-        </p>
+        <div style="margin-bottom: var(--space-md);">
+          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Problem</h3>
+          <p>Small businesses tracking attendance, stock, orders, payments, and expenses manually.</p>
+        </div>
+        <div style="margin-bottom: var(--space-md);">
+          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Solution</h3>
+          <p>A business operations mobile application providing shift attendance logging, inventory tracking with low-stock alerts, order processing, payment records, expense categorization, and balance sheet reporting.</p>
+        </div>
+        <div>
+          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Engineering</h3>
+          <p>Built with Flutter and Riverpod using Firebase (Firestore, Auth, Storage), Go Router, and Freezed with Material Design 3. Implements role-based access control with Admin and Staff roles, live dashboard metrics, and offline persistence.</p>
+        </div>
+      </section>
+
+      <!-- Technical Highlights -->
+      <section class="section-content reveal" style="margin-top: var(--space-xl);">
+        <h2>Technical Highlights</h2>
+        <ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 1.8; color: var(--text-secondary);">
+          <li>Riverpod state management for reactive data synchronization</li>
+          <li>Cloud Firestore and Firebase Auth with Admin and Staff roles</li>
+          <li>Cloud Storage for receipts and document attachments</li>
+          <li>Material 3 design system supporting dark and light themes</li>
+          <li>Multi-language localization and tablet-adaptive responsive layouts</li>
+        </ul>
       </section>
 
       <!-- Key Features Grid -->
       <section class="section-content reveal" style="margin-top: var(--space-xl);">
-        <h2>Key Modules & Features</h2>
+        <h2>Key Modules &amp; Features</h2>
         <ul class="feature-list">
           <li class="feature-list__item">
             <span class="feature-list__icon">🏠</span>
             <div>
-              <strong>Real-time Dashboard:</strong> Get instant metrics on daily attendance, pending orders, revenue receipts, and operational expenses.
+              <strong>Operations Dashboard:</strong> Overview displaying daily attendance, pending orders, revenue receipts, and operational expenses.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">👥</span>
             <div>
-              <strong>Attendance Tracking:</strong> Track shift presence (morning, afternoon) for workers with present/absent/half-day indicators.
+              <strong>Attendance Tracking:</strong> Track shift presence (morning, afternoon) for workers with present, absent, and half-day records.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">📦</span>
             <div>
-              <strong>Inventory Control:</strong> Real-time stock counts, multi-unit layouts (kg, pcs, liters), and alert boundaries for low stock.
+              <strong>Inventory Control:</strong> Stock counts, multi-unit formats (kg, pcs, liters), and alert boundaries for low stock.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">📋</span>
             <div>
-              <strong>Order Management:</strong> Log consumer requests, track workflow state (pending, ready, shipped), and link transactions to user records.
+              <strong>Order Management:</strong> Log customer orders, update order status (pending, ready, shipped), and track transaction records.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">💰</span>
             <div>
-              <strong>Payment Trackers:</strong> Record incoming cash or digital payments, link transactions to customer bills, and track revenue.
+              <strong>Payment Tracking:</strong> Record cash and digital payments, link transactions to customer orders, and track revenue.
             </div>
           </li>
           <li class="feature-list__item">
@@ -145,13 +176,13 @@
           <li class="feature-list__item">
             <span class="feature-list__icon">📊</span>
             <div>
-              <strong>Live Balance Sheets:</strong> Financial logs that display overall margins, customer-wise transactions, and filterable audit paths.
+              <strong>Balance Sheet:</strong> Financial ledger displaying margins, customer-wise transactions, and filterable audit logs.
             </div>
           </li>
           <li class="feature-list__item">
             <span class="feature-list__icon">👤</span>
             <div>
-              <strong>Access Controls:</strong> Role-based parameters classifying Admin actions from standard user functionalities.
+              <strong>Access Controls:</strong> Role-based permissions differentiating Admin actions from Staff functions.
             </div>
           </li>
         </ul>
@@ -165,13 +196,13 @@
           <thead>
             <tr>
               <th>Screen</th>
-              <th>Functionality & Interactive Role</th>
+              <th>Functionality &amp; Interactive Role</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="screen-name">Dashboard</td>
-              <td>Home overview displaying direct figures (Today's Earnings, Active Workers, Low Inventory warnings) and navigation cards.</td>
+              <td>Home overview displaying figures (Today's Earnings, Active Workers, Low Inventory warnings) and navigation cards.</td>
             </tr>
             <tr>
               <td class="screen-name">Attendance Manager</td>
@@ -218,7 +249,7 @@
               │          Firebase Backend            │
               │  ┌───────────┐  ┌─────────────────┐ │
               │  │ Firestore │  │ Authentication  │ │
-              │  │    (DB)   │  │  (Email/Pass)   │ │
+              │  │    (DB)   │  │  (Admin/Staff)  │ │
               │  └───────────┘  └─────────────────┘ │
               │  ┌──────────────────────────────┐   │
               │  │       Cloud Storage          │   │
@@ -234,35 +265,35 @@
         <p class="text-muted" style="margin-bottom: var(--space-md);">Click on a screen preview to view it in high resolution.</p>
         <div class="gallery">
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Home .jpeg" alt="UrbanLeafs Home Dashboard" loading="lazy">
+            <img src="../assets/UrbanLeafs/home.jpeg" alt="UrbanLeafs Home Dashboard" loading="lazy">
             <div class="gallery__item-label">Home Dashboard</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Menu .jpeg" alt="UrbanLeafs Navigation Menu" loading="lazy">
+            <img src="../assets/UrbanLeafs/menu.jpeg" alt="UrbanLeafs Navigation Menu" loading="lazy">
             <div class="gallery__item-label">Navigation Menu</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Attendance.jpeg" alt="UrbanLeafs Attendance Manager" loading="lazy">
+            <img src="../assets/UrbanLeafs/attendance.jpeg" alt="UrbanLeafs Attendance Manager" loading="lazy">
             <div class="gallery__item-label">Attendance Manager</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Inventory.jpeg" alt="UrbanLeafs Inventory Dashboard" loading="lazy">
+            <img src="../assets/UrbanLeafs/inventory.jpeg" alt="UrbanLeafs Inventory Dashboard" loading="lazy">
             <div class="gallery__item-label">Inventory Dashboard</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Expense.jpeg" alt="UrbanLeafs Expense Manager" loading="lazy">
+            <img src="../assets/UrbanLeafs/expense.jpeg" alt="UrbanLeafs Expense Manager" loading="lazy">
             <div class="gallery__item-label">Expense Manager</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Balancesheet.jpeg" alt="UrbanLeafs Balance Sheet" loading="lazy">
+            <img src="../assets/UrbanLeafs/balancesheet.jpeg" alt="UrbanLeafs Balance Sheet" loading="lazy">
             <div class="gallery__item-label">Balance Sheet</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Notification.jpeg" alt="UrbanLeafs Notifications" loading="lazy">
+            <img src="../assets/UrbanLeafs/notification.jpeg" alt="UrbanLeafs Notifications" loading="lazy">
             <div class="gallery__item-label">Notifications</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/UrbanLeafs/Profile.jpeg" alt="UrbanLeafs Profile" loading="lazy">
+            <img src="../assets/UrbanLeafs/profile.jpeg" alt="UrbanLeafs Profile" loading="lazy">
             <div class="gallery__item-label">Profile &amp; Settings</div>
           </div>
         </div>

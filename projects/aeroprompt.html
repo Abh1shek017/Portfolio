@@ -24,6 +24,7 @@
         <a href="../index.html#about" class="nav__link">About</a>
         <a href="../index.html#skills" class="nav__link">Skills</a>
         <a href="../index.html#projects" class="nav__link nav__link--active">Projects</a>
+        <a href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="nav__link">Resume</a>
         <a href="../index.html#contact" class="nav__link">Contact</a>
       </div>
 
@@ -46,6 +47,7 @@
     <a href="../index.html#about" class="mobile-nav__link">About</a>
     <a href="../index.html#skills" class="mobile-nav__link">Skills</a>
     <a href="../index.html#projects" class="mobile-nav__link">Projects</a>
+    <a href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav__link">Resume</a>
     <a href="../index.html#contact" class="mobile-nav__link">Contact</a>
   </div>
 
@@ -59,12 +61,12 @@
       </a>
 
       <header class="project-detail__header">
-        <img src="../assets/aeroprompt/cropped_circle_image.png" alt="AeroPrompt Logo" class="project-detail__logo-img">
+        <img src="../assets/aeroprompt/cropped_circle_image.webp" alt="AeroPrompt Logo" class="project-detail__logo-img">
         <h1 class="project-detail__title">
           <a href="https://chromewebstore.google.com/detail/ai-prompt-optimizer-aerop/mmobjkmjalcmndglobfffdgdkdkcngeg" target="_blank" rel="noopener" class="project-detail__title-link">
             AeroPrompt <span>🔗</span>
           </a>
-          <span class="badge badge--status badge--completed">Completed</span>
+          <span class="badge badge--status badge--completed">Live</span>
           <span class="badge badge--accent">Full Stack Developer</span>
         </h1>
         <p class="project-detail__tagline">
@@ -100,7 +102,7 @@
       <section class="section-content reveal">
         <h2>About AeroPrompt</h2>
         <p>
-          AeroPrompt is a comprehensive utility designed to optimize user prompts on popular AI interfaces (ChatGPT, Claude, and Gemini). Available as both a browser extension and a companion dashboard, the application handles prompt rewriting dynamically on the client side using a secure backend AI pipeline.
+          AeroPrompt is a utility designed to optimize user prompts on popular AI interfaces (ChatGPT, Claude, and Gemini). Available as both a browser extension and a companion dashboard, the application handles prompt rewriting dynamically on the client side using a backend AI pipeline.
         </p>
         <p>
           The Chrome extension is built on the Plasmo browser extension framework using React and TypeScript, allowing it to inject custom script overlays directly into LLM text areas. These script overlays intercept user entries, stream conversation history to calculate context relevance, append personalized user bio directives, and allow real-time tone adjustments (Professional, Persuasive, Concise). Telemetry is handled by a Dockerized FastAPI service deployed on Google Cloud Run, supported by Supabase for DB storage and payment configurations via Razorpay checkout webhooks.
@@ -144,7 +146,7 @@
           <li class="feature-list__item">
             <span class="feature-list__icon">🐳</span>
             <div>
-              <strong>Cloud Pipelines:</strong> Scalable backend microservices built with Python / FastAPI and deployed via Docker on Google Cloud Run.
+              <strong>Cloud Pipelines:</strong> Backend microservices built with Python / FastAPI and deployed via Docker on Google Cloud Run.
             </div>
           </li>
         </ul>
@@ -219,19 +221,19 @@
         <p class="text-muted" style="margin-bottom: var(--space-md);">Click on a screen preview to view it in high resolution.</p>
         <div class="gallery gallery--landscape">
           <div class="gallery__item">
-            <img src="../assets/aeroprompt/Screenshot_2026-01-03_232355_with_bgc.png" alt="AeroPrompt Web Dashboard & Prompt History">
+            <img src="../assets/aeroprompt/Screenshot_2026-01-03_232355_with_bgc.webp" alt="AeroPrompt Web Dashboard & Prompt History">
             <div class="gallery__item-label">Web Console & History</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/aeroprompt/Screenshot_2026-01-03_203908_with_bgc.png" alt="AeroPrompt Chrome Extension Popup UI">
+            <img src="../assets/aeroprompt/Screenshot_2026-01-03_203908_with_bgc.webp" alt="AeroPrompt Chrome Extension Popup UI">
             <div class="gallery__item-label">Chrome Extension Popup</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/aeroprompt/Screenshot_2026-01-03_203842_with_bgc.png" alt="AeroPrompt Tone Adjustments and Custom Personas">
+            <img src="../assets/aeroprompt/Screenshot_2026-01-03_203842_with_bgc.webp" alt="AeroPrompt Tone Adjustments and Custom Personas">
             <div class="gallery__item-label">Persona Configuration</div>
           </div>
           <div class="gallery__item">
-            <img src="../assets/aeroprompt/Screenshot_2026-01-03_233642_with_bgc.png" alt="AeroPrompt Extension Injected Overlay on ChatGPT">
+            <img src="../assets/aeroprompt/Screenshot_2026-01-03_233642_with_bgc.webp" alt="AeroPrompt Extension Injected Overlay on ChatGPT">
             <div class="gallery__item-label">Injected Overlay</div>
           </div>
         </div>
