@@ -471,6 +471,16 @@
   gap: var(--space-sm);
 }
 
+/* --- Project Cards "See More" Toggle --- */
+.project-card--hidden {
+  display: none !important;
+}
+
+.project-card--visible {
+  display: flex !important;
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* ============================================================
    PROJECT DETAIL PAGE
    ============================================================ */

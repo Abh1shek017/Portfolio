@@ -266,9 +266,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = projectsGrid.querySelectorAll('.project-card');
     const INITIAL_VISIBLE_PROJECTS = 6;
     if (cards.length > INITIAL_VISIBLE_PROJECTS) {
+      // Ensure extra cards are hidden initially via CSS class
       cards.forEach((card, idx) => {
         if (idx >= INITIAL_VISIBLE_PROJECTS) {
-          card.style.display = 'none';
+          card.classList.add('project-card--hidden');
+          card.classList.remove('project-card--visible');
+          card.style.display = '';
         }
       });
 
@@ -283,15 +286,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isExpanded) {
           cards.forEach((card, idx) => {
             if (idx >= INITIAL_VISIBLE_PROJECTS) {
-              card.style.display = '';
-              card.style.animation = 'fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both';
+              card.classList.remove('project-card--hidden');
+              card.classList.add('project-card--visible');
             }
           });
           projectsToggleBtn.innerHTML = `<span>Show Less</span><span class="projects__toggle-icon" style="margin-left: var(--space-xs);">↑</span>`;
         } else {
           cards.forEach((card, idx) => {
             if (idx >= INITIAL_VISIBLE_PROJECTS) {
-              card.style.display = 'none';
+              card.classList.remove('project-card--visible');
+              card.classList.add('project-card--hidden');
             }
           });
           projectsToggleBtn.innerHTML = `<span>See More Projects (+${remainingCount})</span><span class="projects__toggle-icon" style="margin-left: var(--space-xs);">↓</span>`;
@@ -299,7 +303,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     } else {
-      projectsToggleBtn.parentElement.style.display = 'none';
+      if (projectsToggleBtn.parentElement) {
+        projectsToggleBtn.parentElement.style.display = 'none';
+      }
     }
   }
 
