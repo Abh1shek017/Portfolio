@@ -259,6 +259,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- Projects Grid "See More" Toggle (Homepage) ---
+  const projectsGrid = document.querySelector('#projects .grid--3');
+  const projectsToggleBtn = document.getElementById('projects-toggle-btn');
+  if (projectsGrid && projectsToggleBtn) {
+    const cards = projectsGrid.querySelectorAll('.project-card');
+    const INITIAL_VISIBLE_PROJECTS = 6;
+    if (cards.length > INITIAL_VISIBLE_PROJECTS) {
+      cards.forEach((card, idx) => {
+        if (idx >= INITIAL_VISIBLE_PROJECTS) {
+          card.style.display = 'none';
+        }
+      });
+
+      const remainingCount = cards.length - INITIAL_VISIBLE_PROJECTS;
+      projectsToggleBtn.innerHTML = `<span>See More Projects (+${remainingCount})</span><span class="projects__toggle-icon" style="margin-left: var(--space-xs);">↓</span>`;
+
+      let isExpanded = false;
+      projectsToggleBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        projectsToggleBtn.setAttribute('aria-expanded', String(isExpanded));
+
+        if (isExpanded) {
+          cards.forEach((card, idx) => {
+            if (idx >= INITIAL_VISIBLE_PROJECTS) {
+              card.style.display = '';
+              card.style.animation = 'fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both';
+            }
+          });
+          projectsToggleBtn.innerHTML = `<span>Show Less</span><span class="projects__toggle-icon" style="margin-left: var(--space-xs);">↑</span>`;
+        } else {
+          cards.forEach((card, idx) => {
+            if (idx >= INITIAL_VISIBLE_PROJECTS) {
+              card.style.display = 'none';
+            }
+          });
+          projectsToggleBtn.innerHTML = `<span>See More Projects (+${remainingCount})</span><span class="projects__toggle-icon" style="margin-left: var(--space-xs);">↓</span>`;
+          document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    } else {
+      projectsToggleBtn.parentElement.style.display = 'none';
+    }
+  }
+
   // --- Interactive Screen-by-Screen Breakdown ---
   const screenTableRows = document.querySelectorAll('.screen-table tr');
   screenTableRows.forEach(row => {

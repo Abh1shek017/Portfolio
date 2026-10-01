@@ -376,7 +376,7 @@ const PROJECTS = {
     emoji: '💼',
     name: 'The Manager',
     tagline: 'An AI-powered developer project manager and operations cockpit',
-    status: 'Work in Progress',
+    status: 'In Development',
     role: 'Solo Developer',
     platform: 'Web (Next.js + FastAPI)',
     description: 'The Manager is a self-hosted developer operations cockpit designed to organize projects, tasks, milestones, environments, and secrets in a single dashboard. It features a keyboard-first Omnibar (Ctrl+K) supporting quick navigation, custom status/priority filters, and natural language command parsing (powered by Groq Llama 3.3). Includes a Developer Vault for API key and port allocation management, workflow triage matrix lanes, and cost/burn rate monitoring trackers.',

@@ -112,17 +112,19 @@
       <!-- Detailed Description: Problem / Solution / Engineering -->
       <section class="section-content reveal">
         <h2>About MedTrack</h2>
-        <div style="margin-bottom: var(--space-md);">
-          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Problem</h3>
-          <p>Independent pharmacies track medicine batches and expiry dates, distributor balances, and informal customer credit across separate records.</p>
-        </div>
-        <div style="margin-bottom: var(--space-md);">
-          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Solution</h3>
-          <p>A back-office app covering procurement, batch-level stock, supplier payments, B2B invoicing, and a credit ledger.</p>
-        </div>
-        <div>
-          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: var(--space-xs);">Engineering</h3>
-          <p>Built with Flutter and Riverpod using an offline-first architecture powered by Drift (SQLite). Local data syncs to a Python/FastAPI backend with PostgreSQL, Alembic migrations, and Docker, hosted on Oracle Cloud Infrastructure (OCI). Implements biometric login, email OTP 2FA, device-session revocation, and Gemini API for bill parsing. Supports Admin and Staff roles.</p>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md); margin-top: var(--space-md);">
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--border-radius-md); padding: var(--space-lg);">
+            <h3 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: var(--space-xs);">Problem</h3>
+            <p style="margin: 0; line-height: 1.7; color: var(--text-secondary);">Independent pharmacies track medicine batches and expiry dates, distributor balances, and informal customer credit across separate records.</p>
+          </div>
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--border-radius-md); padding: var(--space-lg);">
+            <h3 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: var(--space-xs);">Solution</h3>
+            <p style="margin: 0; line-height: 1.7; color: var(--text-secondary);">A back-office app covering procurement, batch-level stock, supplier payments, B2B invoicing, and a credit ledger.</p>
+          </div>
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--border-radius-md); padding: var(--space-lg);">
+            <h3 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: var(--space-xs);">Engineering</h3>
+            <p style="margin: 0; line-height: 1.7; color: var(--text-secondary);">Built as a solo developer with Flutter and Riverpod using an offline-first architecture powered by Drift (SQLite), Go Router, and Freezed. Includes barcode scanning and PDF generation. Local data syncs to a Python/FastAPI backend with PostgreSQL, Alembic migrations, and Docker, hosted on Oracle Cloud Infrastructure (OCI). Implements biometric login, email OTP 2FA, device-session revocation, and Gemini API for bill parsing. Features Admin and Staff roles.</p>
+          </div>
         </div>
       </section>
 
